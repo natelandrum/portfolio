@@ -1,0 +1,162 @@
+{
+  "home": {
+    "title": "Software Portfolio",
+    "description": "I'm a software developer specializing in building modern web applications with Vue, React, Nuxt.js, and Next.js. I have a passion for creating beautiful, responsive user interfaces with clean code."
+  },
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Software Developer",
+    "description": "I build modern web applications with Vue, React, and Next.js. Passionate about creating beautiful, responsive user interfaces with clean code.",
+    "viewWork": "View My Work",
+    "contactMe": "Contact Me"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Below is a curated selection of projects I've recently worked on, each showcasing my ability to build responsive, user-friendly web applications using technologies like Vue, React, and Next.js.",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "list": [
+      {
+        "id": 1,
+        "title": "Handcrafted Haven",
+        "description": "A web application connecting artisans with customers who appreciate handmade products. It serves as a digital marketplace, fostering community, supporting local artisans, and promoting sustainable consumption.",
+        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744568216/handcrafted-haven_qugba3.png",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "Typescript",
+          "MUI Material",
+          "Cloudinary",
+          "Postgres"
+        ],
+        "githubLink": "https://github.com/natelandrum/handcrafted-haven",
+        "demoLink": "https://handcrafted-haven-nu-khaki.vercel.app/"
+      },
+      {
+        "id": 2,
+        "title": "Family Recipe Vault",
+        "description": "The Family Recipe Vault is a secure and collaborative digital platform designed to preserve, organize, and share family recipes. This project aims to address the challenge of maintaining family culinary traditions by providing a centralized space for recipe storage, historical context, and collaboration among family members.",
+        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744569156/family-recipe-vault_npgesp.png",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "Typescript",
+          "MUI Material",
+          "Framer Motion",
+          "Cloudinary",
+          "Vercel Postgres"
+        ],
+        "githubLink": "https://github.com/natelandrum/family-recipe-vault",
+        "demoLink": "https://family-recipe-vault.vercel.app/"
+      },
+      {
+        "id": 3,
+        "title": "FileX",
+        "description": "FileX is a sleek file-sharing application with built-in error notifications. It allows users to upload, download, and manage files effortlessly while ensuring a seamless user experience with real-time feedback and modern UI animations.",
+        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744569660/file-sharing_usntfc.png",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "Typescript",
+          "MUI Material",
+          "Framer Motion",
+          "File Saver",
+          "Jszip",
+          "Cloudinary",
+          "Vercel Postgres"
+        ],
+        "githubLink": "https://github.com/natelandrum/file-sharing-system",
+        "demoLink": "https://file-sharing-system-psi.vercel.app/"
+      },
+      {
+        "id": 4,
+        "title": "Task Manager Todo List",
+        "description": "A task management application built with Next.js, TypeScript, and Prisma. Users can add, edit, and manage tasks in place using an intuitive UI.",
+        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744569906/todo_zyryav.png",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "Typescript",
+          "MUI Material",
+          "NextAuth",
+          "Prisma"
+        ],
+        "githubLink": "https://github.com/natelandrum/todo-list",
+        "demoLink": "https://todo-list-flax-gamma.vercel.app/"
+      },
+      {
+        "id": 5,
+        "title": "Real-Time Chat App",
+        "description": "A modern, real-time chat application with infinite scroll, multi-user conversations, edit and delete functionality, hover menus, global state, and data persistence.",
+        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744571362/chat-app_rxfywf.png",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "Typescript",
+          "MUI Material",
+          "Ably",
+          "Redux",
+          "React Query",
+          "Vercel Postgres"
+        ],
+        "githubLink": "https://github.com/natelandrum/chat-app",
+        "demoLink": "https://chat-app-sandy-phi-61.vercel.app/"
+      }
+    ]
+  },
+  "skills": {
+    "title": "The skills, tools, and technologies I use:",
+    "icons": {
+      "vue": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+      "react": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      "next": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+      "nuxt": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg",
+      "prisma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
+      "tailwind": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+      "bootstrap": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+      "css": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      "typescript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      "javascript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      "html": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      "git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+      "github": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+      "npm": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
+      "vite": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg"
+    }
+  },
+  "contact": {
+    "myName": "Nathan Landrum",
+    "title": "Contact Me",
+    "connectWithMe": "Connect with Me",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "thankYou": "Thank You!",
+    "getBack": "We'll get back to you as soon as possible.",
+    "sendAnother": "Send Another Message",
+    "contactInfo": "Contact Information",
+    "reachOut": "I love coding and collaborating with others. Feel free to reach out using the contact information below or by filling out the form.",
+    "myPhone": "+52 (563) 095-4842",
+    "myEmail": "nlandrum.dev@gmail.com",
+    "myLocation": "Mexico City, Mexico",
+    "myLinkedIn": "https://www.linkedin.com/in/nathan-landrum-dev/",
+    "myGithub": "https://github.com/natelandrum"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "quickLinks": "Quick Links",
+    "aboutDeveloper": "A passionate software developer specializing in building modern web applications with Vue, React, and Next.js."
+  }
+}
