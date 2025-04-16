@@ -1,0 +1,32 @@
+@import './base.css';
+
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  font-size: large;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  font-size: large;
+  border-radius: 8px;
+  padding: 0.5rem;
+  border: 1px solid;
+  transform: scale(1);
+  transition: transform 0.2s;
+}
+
+.green:hover {
+  transform: scale(0.95);
+}
+
+@media (hover: hover) {
+  .green:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+    cursor: pointer;
+  }
+}
