@@ -111,6 +111,22 @@
         ],
         "githubLink": "https://github.com/natelandrum/chat-app",
         "demoLink": "https://chat-app-sandy-phi-61.vercel.app/"
+      },
+      {
+        "id": 6,
+        "title": "Sudoku Solver",
+        "description": "Solucionador de Sudoku utilizando Erlang. Este solucionador verifica si un rompecabezas de Sudoku es válido y lo resuelve utilizando un algoritmo recursivo de retroceso. También proporciona una interfaz web construida con Next.js y React. Tanto el backend como el frontend están containerizados usando Docker, permitiendo una fácil implementación y escalabilidad.",
+        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744572725/sudoku-solver_p1ektk.png",
+        "technologies": [
+          "Erlang",
+          "Next.js",
+          "React",
+          "Typescript",
+          "Tailwind CSS",
+          "Docker"
+        ],
+        "githubLink": "https://github.com/natelandrum/sudoku_solver",
+        "demoLink": "https://sudokusolver-production-12d5.up.railway.app/"
       }
     ]
   },
