@@ -127,6 +127,32 @@
         ],
         "githubLink": "https://github.com/natelandrum/sudoku_solver",
         "demoLink": "https://sudokusolver-production-12d5.up.railway.app/"
+      },
+      {
+        "id": 7,
+        "title": "Vocab Extractor Extension",
+        "description": "A tool for extracting vocabulary from Duolingo words practice in a JSON format for personal use or with my flashcards site. (Available in the Chrome Web Store)",
+        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1747607103/Screenshot_2025-05-18_162453_l4sgz2.png",
+        "technologies": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
+        "demoLink": "https://chromewebstore.google.com/detail/vocab-extractor/mdgbblkeiiflhnfhipkholfpbmpdfpfo"
+      },
+      {
+        "id": 8,
+        "title": "Flashcards site",
+        "description": "A web application for uploading, studying, and managing flashcards. Built with Nuxt.js, Vue, TypeScript, and Tailwind CSS, it offers a user-friendly interface with smooth animations and seamless performance. It is designed for desktop and touch devices, ensuring a responsive experience.",
+        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1747606991/Screenshot_2025-05-18_162041_uwwhsb.png",
+        "technologies": [
+          "Nuxt.js",
+          "Vue",
+          "TypeScript",
+          "Tailwind CSS"
+        ],
+        "githubLink": "https://github.com/natelandrum/flashcard-site",
+        "demoLink": "https://flashcard-site-gold.vercel.app/"
       }
     ]
   },
