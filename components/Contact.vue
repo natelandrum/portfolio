@@ -4,6 +4,7 @@
   import LocationIcon from '@/assets/icons/location.svg'
   import GithubIcon from '@/assets/icons/github.svg'
   import LinkedInIcon from '@/assets/icons/linkedin.svg'
+  import CVIcon from '@/assets/icons/cv.svg'
 
   const { t } = useTranslation()
 
@@ -68,8 +69,6 @@
     isSubmitting.value = true
 
     try {
-      // In a real application, you would send the form data to a backend service
-      // This is a simulation of an API call
        await $fetch('/api/contact', {
           method: 'POST',
           body: {
@@ -113,19 +112,31 @@
 
           <div class="space-y-4">
             <div class="flex items-start">
-              <div class="absolute w-80 h-50">
+              <div class="absolute w-80 h-50 -z-10">
                 <GradientBackground />
               </div>
-              <EmailIcon class="mr-3 w-6 h-6" />
-              <span>{{ t('contact.myEmail') }}</span>
+              <div class="flex items-center py-2 hover:scale-110 transition-transform">
+                <EmailIcon class="mr-3 w-6 h-6 flex-shrink-0" />
+                <a :href="`mailto:${t('contact.myEmail')}`">{{ t('contact.myEmail') }}</a>
+              </div>
             </div>
             <div class="flex items-start">
-              <PhoneIcon class="mr-3 w-6 h-6" />
-              <span>{{ t('contact.myPhone') }}</span>
+              <div class="flex items-center py-2 hover:scale-110 transition-transform">
+                <PhoneIcon class="mr-3 w-6 h-6 flex-shrink-0" />
+                <a :href="`tel:${t('contact.myPhone')}`">{{ t('contact.myPhone') }}</a>
+              </div>
             </div>
             <div class="flex items-start">
-              <LocationIcon class="mr-3 w-6 h-6" />
-              <span>{{ t('contact.myLocation') }}</span>
+              <div class="flex items-center py-2 hover:scale-110 transition-transform">
+                <LocationIcon class="mr-3 w-6 h-6 flex-shrink-0" />
+                <span class="inline-block">{{ t('contact.myLocation') }}</span>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <a href="/CV.docx" download class="flex items-center hover:scale-110 transition-transform cursor-pointer py-2">
+                <CVIcon class="mr-3 w-6 h-6 invert flex-shrink-0" />
+                <span class="inline-block">{{ t('contact.myCV') }}</span>
+              </a>
             </div>
           </div>
 
@@ -135,7 +146,7 @@
               <!-- Social media links -->
               <div class="h-8 w-8 flex justify-center items-center hover:scale-120 transition-transform">
                 <a :href="t('contact.myGithub')" class="text-white! hover:bg-transparent!">
-                <GithubIcon class="w-6 h-6" />
+                <GithubIcon class="w-8 h-8" />
               </a>
               </div>
               <div class="bg-blue-500 h-8 w-8 flex justify-center items-center hover:scale-120 transition-transform">
