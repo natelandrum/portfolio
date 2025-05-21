@@ -28,7 +28,7 @@ export default defineEventHandler(async (event) => {
 
     const headers = getHeaders(event)
     const origin = headers.origin || ''
-    if (!origin.includes('localhost')) {
+    if (!origin.includes('localhost') || !origin.includes('portfolio-six-omega-53.vercel.app')) {
       throw createError({ statusCode: 403, statusMessage: 'Unauthorized origin' })
     }
 
