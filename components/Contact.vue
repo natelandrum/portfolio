@@ -106,7 +106,7 @@
           :class="infoVisible ? 'translate-x-0 opacity-100' : 'translate-x-[-50px] opacity-0'"
         >
           <h3 class="mb-6 text-2xl font-bold text-primary">{{ t('contact.contactInfo') }}</h3>
-          <p class="mb-8 text-gray-400">
+          <p class="mb-8 text-gray-400 max-w-[500px]">
             {{ t('contact.reachOut') }}
           </p>
 
