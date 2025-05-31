@@ -11,7 +11,7 @@
   },
   "hero": {
     "title": "Desarrollador de Software",
-    "description": "Construyo aplicaciones web modernas con Vue, React y Next.js. Apasionado por crear interfaces de usuario hermosas y responsivas con código limpio.",
+    "description": "Construyo aplicaciones web modernas con Vue, React, Nuxt.js, y Next.js. Apasionado por crear interfaces de usuario hermosas y responsivas con código limpio.",
     "viewWork": "Ver Mi Trabajo",
     "contactMe": "Contáctame"
   },
@@ -36,7 +36,8 @@
           "Postgres"
         ],
         "githubLink": "https://github.com/natelandrum/handcrafted-haven",
-        "demoLink": "https://handcrafted-haven-nu-khaki.vercel.app/"
+        "demoLink": "https://handcrafted-haven-nu-khaki.vercel.app/",
+        "touchIconClass": "dark"
       },
       {
         "id": 2,
@@ -54,7 +55,8 @@
           "Vercel Postgres"
         ],
         "githubLink": "https://github.com/natelandrum/family-recipe-vault",
-        "demoLink": "https://family-recipe-vault.vercel.app/"
+        "demoLink": "https://family-recipe-vault.vercel.app/",
+        "touchIconClass": "dark"
       },
       {
         "id": 3,
@@ -74,7 +76,8 @@
           "Vercel Postgres"
         ],
         "githubLink": "https://github.com/natelandrum/file-sharing-system",
-        "demoLink": "https://file-sharing-system-psi.vercel.app/"
+        "demoLink": "https://file-sharing-system-psi.vercel.app/",
+        "touchIconClass": "light"
       },
       {
         "id": 4,
@@ -91,7 +94,8 @@
           "Prisma"
         ],
         "githubLink": "https://github.com/natelandrum/todo-list",
-        "demoLink": "https://todo-list-flax-gamma.vercel.app/"
+        "demoLink": "https://todo-list-flax-gamma.vercel.app/",
+        "touchIconClass": "light"
       },
       {
         "id": 5,
@@ -110,7 +114,8 @@
           "Vercel Postgres"
         ],
         "githubLink": "https://github.com/natelandrum/chat-app",
-        "demoLink": "https://chat-app-sandy-phi-61.vercel.app/"
+        "demoLink": "https://chat-app-sandy-phi-61.vercel.app/",
+        "touchIconClass": "light"
       },
       {
         "id": 6,
@@ -126,33 +131,27 @@
           "Docker"
         ],
         "githubLink": "https://github.com/natelandrum/sudoku_solver",
-        "demoLink": "https://sudokusolver-production-12d5.up.railway.app/"
+        "demoLink": "https://sudokusolver-production-12d5.up.railway.app/",
+        "touchIconClass": "light"
       },
       {
         "id": 7,
         "title": "Vocab Extractor Extension",
         "description": "Una herramienta para extraer vocabulario de la práctica de palabras de Duolingo en formato JSON para uso personal o con mi sitio de tarjetas didácticas. (Disponible en Chrome Web Store)",
         "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1747607103/Screenshot_2025-05-18_162453_l4sgz2.png",
-        "technologies": [
-          "HTML",
-          "CSS",
-          "JavaScript"
-        ],
-        "demoLink": "https://chromewebstore.google.com/detail/vocab-extractor/mdgbblkeiiflhnfhipkholfpbmpdfpfo"
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "demoLink": "https://chromewebstore.google.com/detail/vocab-extractor/mdgbblkeiiflhnfhipkholfpbmpdfpfo",
+        "touchIconClass": "light"
       },
       {
         "id": 8,
         "title": "Flashcards site",
         "description": "Una aplicación web para subir, estudiar y gestionar tarjetas didácticas. Construida con Nuxt.js, Vue, TypeScript y Tailwind CSS, ofrece una interfaz fácil de usar con animaciones fluidas y un rendimiento impecable. Está diseñada para dispositivos de escritorio y táctiles, asegurando una experiencia responsiva.",
         "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1747606991/Screenshot_2025-05-18_162041_uwwhsb.png",
-        "technologies": [
-          "Nuxt.js",
-          "Vue",
-          "TypeScript",
-          "Tailwind CSS"
-        ],
+        "technologies": ["Nuxt.js", "Vue", "TypeScript", "Tailwind CSS"],
         "githubLink": "https://github.com/natelandrum/flashcard-site",
-        "demoLink": "https://flashcard-site-gold.vercel.app/"
+        "demoLink": "https://flashcard-site-gold.vercel.app/",
+        "touchIconClass": "light"
       }
     ]
   },
@@ -200,6 +199,6 @@
   "footer": {
     "rights": "Todos los derechos reservados",
     "quickLinks": "Enlaces Rápidos",
-    "aboutDeveloper": "Un apasionado desarrollador de software especializado en la construcción de aplicaciones web modernas con Vue, React y Next.js."
+    "aboutDeveloper": "Un apasionado desarrollador de software especializado en la construcción de aplicaciones web modernas con Vue, React, Nuxt.js, y Next.js."
   }
 }

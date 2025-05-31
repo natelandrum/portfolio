@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import GithubIcon from '@/assets/icons/github.svg'
 import LinkIcon from '@/assets/icons/link.svg'
+import TouchIcon from '@/assets/icons/touch.svg'
 
 const { t } = useTranslation()
 const { isMobile, isDesktop } = useDevice()
@@ -12,6 +13,7 @@ defineProps<{
   technologies: string[]
   githubLink?: string
   demoLink?: string
+  touchIconClass?: 'dark' | 'light'
 }>()
 
 const isExpanded = ref(false)
@@ -37,13 +39,14 @@ const toggleExpanded = () => (isExpanded.value = !isExpanded.value)
       </div>
     </div>
     
-    <!-- Mobile indicator dot to show there's more info -->
-    <div 
+    <!-- Mobile touch indicator to show there's more info -->
+    <TouchIcon
       v-if="isMobile && !isExpanded" 
-      class="absolute top-3 right-3 w-3 h-3 bg-blue-500 rounded-full animate-pulse"
+      class="absolute top-3 right-5 w-8 h-8 rounded-full animate-pulse"
+      :class="touchIconClass === 'light' ? 'text-white' : 'text-gray-800'"
       aria-hidden="true"
-    ></div>
-    
+    ></TouchIcon>
+
     <!-- Project Image -->
     <div class="h-48 bg-gradient-to-r from-gray-800 to-gray-700 flex justify-center">
       <img v-if="image" :src="image" :alt="title" class="w-full h-full object-cover" />
@@ -108,10 +111,10 @@ const toggleExpanded = () => (isExpanded.value = !isExpanded.value)
 
 @keyframes pulse {
   0%, 100% {
-    opacity: 1;
+    scale: 1.2;
   }
   50% {
-    opacity: 0.5;
+    scale: 0.9;
   }
 }
 

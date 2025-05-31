@@ -9,6 +9,7 @@
     technologies: string[]
     githubLink?: string
     demoLink?: string
+    touchIconClass?: "dark" | "light"
   }
 
   // Reactive array to track which projects are visible
@@ -113,6 +114,7 @@
             :technologies="project.technologies"
             :github-link="project.githubLink"
             :demo-link="project.demoLink"
+            :touch-icon-class="project.touchIconClass"
           />
         </div>
       </div>
