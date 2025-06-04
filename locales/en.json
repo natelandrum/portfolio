@@ -76,7 +76,7 @@
           "Vercel Postgres"
         ],
         "githubLink": "https://github.com/natelandrum/file-sharing-system",
-        "demoLink": "https://file-sharing-system-psi.vercel.app/",
+        "demoLink": "https://file-sharing.nlandrum.dev/",
         "touchIconClass": "light"
       },
       {
@@ -94,7 +94,7 @@
           "Prisma"
         ],
         "githubLink": "https://github.com/natelandrum/todo-list",
-        "demoLink": "https://todo-list-flax-gamma.vercel.app/",
+        "demoLink": "https://todo.nlandrum.dev/",
         "touchIconClass": "light"
       },
       {
@@ -114,7 +114,7 @@
           "Vercel Postgres"
         ],
         "githubLink": "https://github.com/natelandrum/chat-app",
-        "demoLink": "https://chat-app-sandy-phi-61.vercel.app/",
+        "demoLink": "https://chat.nlandrum.dev/",
         "touchIconClass": "light"
       },
       {
@@ -131,7 +131,7 @@
           "Docker"
         ],
         "githubLink": "https://github.com/natelandrum/sudoku_solver",
-        "demoLink": "https://sudokusolver-production-12d5.up.railway.app/",
+        "demoLink": "https://sudoku-solver.nlandrum.dev/",
         "touchIconClass": "light"
       },
       {
@@ -150,7 +150,7 @@
         "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1747606991/Screenshot_2025-05-18_162041_uwwhsb.png",
         "technologies": ["Nuxt.js", "Vue", "TypeScript", "Tailwind CSS"],
         "githubLink": "https://github.com/natelandrum/flashcard-site",
-        "demoLink": "https://flashcard-site-gold.vercel.app/",
+        "demoLink": "https://flashcards.nlandrum.dev/",
         "touchIconClass": "light"
       }
     ]
