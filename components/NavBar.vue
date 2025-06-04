@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import TopIcon from '@/assets/icons/top.svg'
+  import { watch } from 'vue'
   const isMenuOpen = ref(false)
   const { t } = useTranslation()
   const { showScrollTop, scrollToSection } = useScroll()
@@ -12,6 +13,14 @@
     scrollToSection(id)
     isMenuOpen.value = false
   }
+
+  watch(isMenuOpen, (open) => {
+    if (open) {
+      document.body.classList.add('overflow-hidden')
+    } else {
+      document.body.classList.remove('overflow-hidden')
+    }
+  })
 </script>
 
 <template>
