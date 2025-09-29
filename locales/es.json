@@ -152,6 +152,16 @@
         "githubLink": "https://github.com/natelandrum/flashcard-site",
         "demoLink": "https://flashcards.nlandrum.dev/",
         "touchIconClass": "light"
+      },
+      {
+        "id": 9,
+        "title": "QR Code Generator",
+        "description": "Un simple generador de códigos QR construido con HTML, CSS y JavaScript. Permite a los usuarios crear códigos QR para URLs, texto, wifi y contactos. Puedes personalizar los colores y descargar el código QR generado como una imagen PNG.",
+        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1759121429/Screenshot_2025-09-28_224313_jvkbjk.png",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "githubLink": "https://github.com/natelandrum/qr-code-generator",
+        "demoLink": "https://qr-generator.nlandrum.dev/",
+        "touchIconClass": "dark"
       }
     ]
   },
