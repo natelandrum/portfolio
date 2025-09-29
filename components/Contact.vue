@@ -133,7 +133,7 @@
               </div>
             </div>
             <div class="flex items-start">
-              <a href="/CV.docx" download class="flex items-center hover:scale-110 transition-transform cursor-pointer py-2">
+              <a href="/Nathan Landrum resume.docx" download class="flex items-center hover:scale-110 transition-transform cursor-pointer py-2">
                 <CVIcon class="mr-3 w-6 h-6 invert flex-shrink-0" />
                 <span class="inline-block">{{ t('contact.myCV') }}</span>
               </a>
