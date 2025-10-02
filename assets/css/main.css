@@ -1,16 +1,8 @@
 @import './base.css';
 
-.green {
+.blue {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  font-size: large;
-  border-radius: 8px;
-  padding: 0.5rem;
-}
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: #3b82f6;
   transition: 0.4s;
   font-size: large;
   border-radius: 8px;
@@ -20,13 +12,32 @@
   transition: transform 0.2s;
 }
 
-.green:hover {
+.blue:hover:not(.active) {
   transform: scale(0.95);
+  background-color: hsla(217, 91%, 60%, 0.2);
+  cursor: pointer;
 }
 
-@media (hover: hover) {
-  .green:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-    cursor: pointer;
-  }
+.blue.active {
+  color: white;
+  background-color: hsla(217, 91%, 60%, 0.4);
+}
+
+.green {
+  text-decoration: none;
+  color: #10b981;
+  transition: 0.4s;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 0.5rem;
+  border: 1px solid;
+  transform: scale(1);
+  transition: transform 0.2s;
+}
+
+.green:hover {
+  transform: scale(0.95);
+  background-color: hsla(162, 89%, 41%, 0.2);
+  cursor: pointer;
 }

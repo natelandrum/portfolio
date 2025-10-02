@@ -1,25 +1,66 @@
 <script setup lang="ts">
   import TopIcon from '@/assets/icons/top.svg'
-  import { watch } from 'vue'
+  import HomeIcon from '@/assets/icons/home.svg'
+  import ProjectIcon from '@/assets/icons/project.svg'
+  import ResumeIcon from '@/assets/icons/resume.svg'
+  import AboutIcon from '@/assets/icons/about.svg'
+  import { watch, onUnmounted } from 'vue'
+  import { useRoute } from 'vue-router'
+  
   const isMenuOpen = ref(false)
   const { t } = useTranslation()
-  const { showScrollTop, scrollToSection } = useScroll()
+  const { showScrollTop } = useScroll()
+  const route = useRoute()
+
+  // Refs for the elements
+  const mobileMenuButton = ref<HTMLElement | null>(null)
+  const mobileSidebar = ref<HTMLElement | null>(null)
 
   const toggleMenu = () => {
     isMenuOpen.value = !isMenuOpen.value
   }
 
-  const navigateToSection = (id: string) => {
-    scrollToSection(id)
-    isMenuOpen.value = false
+  function scrollToSection(id: string) {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  const handleClickOutside = (event: Event) => {
+    if (!isMenuOpen.value) return
+
+    const target = event.target as Node
+    const button = mobileMenuButton.value
+    const sidebar = mobileSidebar.value
+
+    if (
+      button && !button.contains(target) &&
+      sidebar && !sidebar.contains(target)
+    ) {
+      isMenuOpen.value = false
+    }
   }
 
   watch(isMenuOpen, (open) => {
     if (open) {
-      document.body.classList.add('overflow-hidden')
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+      document.body.style.overflow = 'hidden'
+      document.body.style.paddingRight = `${scrollbarWidth}px`
+      
+      document.addEventListener('click', handleClickOutside)
     } else {
-      document.body.classList.remove('overflow-hidden')
+      document.body.style.overflow = ''
+      document.body.style.paddingRight = ''
+      
+      document.removeEventListener('click', handleClickOutside)
     }
+  })
+
+  onUnmounted(() => {
+    document.removeEventListener('click', handleClickOutside)
+    document.body.style.overflow = ''
+    document.body.style.paddingRight = ''
   })
 </script>
 
@@ -27,39 +68,58 @@
   <nav id="nav" class="px-6 py-4 w-full max-w-[90%] rounded-xl border border-gray-200 mt-4 z-10">
     <div class="container flex items-center justify-between mx-auto">
       <!-- Logo -->
-       <div class="flex items-center cursor-pointer" @click="navigateToSection('nav')">
-          <img src="/assets/logo.png" alt="logo" class="w-14 h-auto rounded-full mr-4 py-0" />
-          <div class="text-xl font-bold uppercase">{{ t('contact.myName') }}</div>
-       </div>
+       <router-link to="/">
+         <div class="flex items-center cursor-pointer">
+            <img src="/assets/logo.png" alt="logo" class="w-14 h-auto rounded-full mr-4 py-0" />
+            <div class="text-xl font-bold uppercase">{{ t('contact.myName') }}</div>
+         </div>
+       </router-link>
 
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center">
-        <div
-          class="px-3 py-2 green border-0!"
-          @click="navigateToSection('nav')"
-          >{{ t('navbar.home') }}
-        </div>
-        <div
-          class="px-3 py-2 green border-0!"
-          @click="navigateToSection('projects')"
-          >{{ t('navbar.projects') }}
-        </div>
-        <div
-          class="px-3 py-2 green border-0!"
-          @click="navigateToSection('skills')"
-          >{{ t('navbar.skills') }}
-        </div>
-        <div
-          class="px-3 py-2 green border-0!"
-          @click="navigateToSection('contact')"
-          >{{ t('navbar.contact') }}
-        </div>
+        <router-link to="/">
+          <div
+            class="px-3 py-2 blue flex border-0!"
+            :class="{ 'active' : route.path === '/' }"
+            >
+            <HomeIcon class="mr-2 h-6 w-5"/>
+            {{ t('navbar.home') }}
+          </div>
+        </router-link>
+        <router-link to="/projects">
+          <div
+            class="px-3 py-2 flex blue border-0!"
+            :class="{ 'active' : route.path === '/projects' }"
+            >
+            <ProjectIcon class="mr-2 h-6 w-5"/>
+            {{ t('navbar.projects') }}
+          </div>
+        </router-link>
+        <router-link to="/resume">
+          <div
+            class="px-3 py-2 blue flex border-0!"
+            :class="{ 'active' : route.path === '/resume' }"
+            >
+            <ResumeIcon class="mr-1 h-6 w-5"/>
+            {{ t('navbar.resume') }}
+          </div>
+        </router-link>
+        <router-link to="/about">
+          <div
+            class="px-3 py-2 blue flex border-0!"
+            :class="{ 'active' : route.path === '/about' }"
+            >
+            <AboutIcon class="mr-1 h-6 w-5"/>
+            {{ t('navbar.about') }}
+          </div>
+        </router-link>
 
         <LanguageToggle />
       </div>
 
       <!-- Mobile Menu Button -->
       <button
+        ref="mobileMenuButton"
         @click="toggleMenu"
         class="md:hidden cursor-pointer text-light focus:outline-none relative z-[60]"
       >
@@ -90,31 +150,48 @@
 
     <!-- Mobile Sidebar -->
     <div
-      class="fixed top-0 right-0 bg-black h-full w-64 shadow-lg z-[50] md:hidden transform transition-transform duration-300 ease-in-out"
+      ref="mobileSidebar"
+      class="mobile-sidebar fixed top-0 right-0 bg-black h-full w-64 shadow-lg z-[50] md:hidden transform transition-transform duration-300 ease-in-out"
       :class="isMenuOpen ? 'translate-x-0' : 'translate-x-full'"
     >
-      <div class="flex flex-col pt-20 px-6">
+      <div class="flex flex-col pt-20 px-6 mb-4">
         <LanguageToggle />
-        <div
-          class="px-3 py-3 rounded-lg green border-0!"
-          @click="navigateToSection('home')"
-          >{{ t('navbar.home') }}</div
-        >
-        <div
-          class="px-3 py-3 rounded-lg green border-0!"
-          @click="navigateToSection('projects')"
-          >{{ t('navbar.projects') }}</div
-        >
-        <div
-          class="px-3 py-3 rounded-lg green border-0!"
-          @click="navigateToSection('skills')"
-          >{{ t('navbar.skills') }}</div
-        >
-        <div
-          class="px-3 py-3 rounded-lg green border-0!"
-          @click="navigateToSection('contact')"
-          >{{ t('navbar.contact') }}</div
-        >
+        <router-link to="/" @click="isMenuOpen = false">
+          <div
+            class="px-3 py-3 mt-4 flex rounded-lg blue border-0!"
+            :class="{ 'active' : route.path === '/' }"
+            >
+            <HomeIcon class="mr-2 h-6 w-5"/>
+            {{ t('navbar.home') }}
+          </div>
+        </router-link>
+        <router-link to="/projects" @click="isMenuOpen = false">
+          <div
+            class="px-3 py-3 flex rounded-lg blue border-0!"
+            :class="{ 'active' : route.path === '/projects' }"
+            >
+            <ProjectIcon class="mr-2 h-6 w-5"/>
+            {{ t('navbar.projects') }}</div
+          >
+        </router-link>
+        <router-link to="/resume" @click="isMenuOpen = false">
+          <div
+            class="px-3 py-3 flex rounded-lg blue border-0!"
+            :class="{ 'active' : route.path === '/resume' }"
+            >
+            <ResumeIcon class="mr-2 h-6 w-5"/>
+            {{ t('navbar.resume') }}</div
+          >
+        </router-link>
+        <router-link to="/about" @click="isMenuOpen = false">
+          <div
+            class="px-3 py-3 flex rounded-lg blue border-0!"
+            :class="{ 'active' : route.path === '/about' }"
+            >
+            <AboutIcon class="mr-2 h-6 w-5"/>
+            {{ t('navbar.about') }}</div
+          >
+        </router-link>
       </div>
     </div>
   </nav>
