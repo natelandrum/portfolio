@@ -6,20 +6,29 @@
   "navbar": {
     "home": "Inicio",
     "projects": "Proyectos",
-    "skills": "Habilidades",
-    "contact": "Contacto"
+    "resume": "Currículum",
+    "about": "Acerca de Mí"
   },
   "hero": {
-    "title": "Desarrollador de Software",
-    "description": "Construyo aplicaciones web modernas con Vue, React, Nuxt.js, y Next.js. Apasionado por crear interfaces de usuario hermosas y responsivas con código limpio.",
-    "viewWork": "Ver Mi Trabajo",
-    "contactMe": "Contáctame"
+    "title": "Hola. Mucho gusto, soy",
+    "titleName": "Nathan",
+    "description": "Soy un estudiante en BYU-I que está obteniendo una licenciatura en desarrollo de software. Me encanta usar la tecnología para resolver problemas. No solo escribo código; tomo la iniciativa, aprendo rápido y persigo soluciones hasta que funcionan."
   },
   "projects": {
     "title": "Proyectos",
     "description": "A continuación se muestra una selección de proyectos en los que he trabajado recientemente, cada uno mostrando mi capacidad para construir aplicaciones web responsivas y amigables para el usuario utilizando tecnologías como Vue, React y Next.js.",
+    "featuredTitle": "Proyectos Destacados",
+    "showOtherProjects": "Mostrar Otros Proyectos",
+    "hideOtherProjects": "Ocultar Otros Proyectos",
     "viewProject": "Ver Proyecto",
+    "viewMore": "Ver Más",
     "viewCode": "Ver Código",
+    "featuredProjects": [
+      {"id": 6},
+      {"id": 7},
+      {"id": 8},
+      {"id": 9}
+    ],
     "list": [
       {
         "id": 1,
@@ -206,6 +215,23 @@
     "myGithub": "https://github.com/natelandrum",
     "myCV": "Mi Currículum"
   },
+  "navCards": [
+    {
+      "cardTitle": "Mis Proyectos",
+      "cardDescription": "Explora una colección de proyectos mostrando mis habilidades.",
+      "cardLink": "/projects"
+    },
+    {
+      "cardTitle": "Mi Currículum",
+      "cardDescription": "Revisa mi formación, habilidades y experiencia laboral.",
+      "cardLink": "/resume"
+    },
+    {
+      "cardTitle": "Acerca de Mí",
+      "cardDescription": "Descubre mi trayectoria, intereses, y mi pasión por el desarrollo.",
+      "cardLink": "/about"
+    }
+  ],
   "footer": {
     "rights": "Todos los derechos reservados",
     "quickLinks": "Enlaces Rápidos",

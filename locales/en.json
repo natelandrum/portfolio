@@ -6,20 +6,27 @@
   "navbar": {
     "home": "Home",
     "projects": "Projects",
-    "skills": "Skills",
-    "contact": "Contact"
+    "resume": "Resume",
+    "about": "About Me"
   },
   "hero": {
-    "title": "Software Developer",
-    "description": "I build modern web applications with Vue, React, Nuxt.js, and Next.js. Passionate about creating beautiful, responsive user interfaces with clean code.",
-    "viewWork": "View My Work",
-    "contactMe": "Contact Me"
+    "title": "Nice to meet you, I'm ",
+    "titleName": "Nathan",
+    "description": "I'm a student at BYU-I getting a Bachelors in Software Development. I love using technology to solve problems. I don't just write code; I take initiative, learn fast, and chase down solutions until they stick."
   },
   "projects": {
-    "title": "Projects",
-    "description": "Below is a curated selection of projects I've recently worked on, each showcasing my ability to build responsive, user-friendly web applications using technologies like Vue, React, and Next.js.",
+    "featuredTitle": "Featured Projects",
+    "showOtherProjects": "Show Other Projects",
+    "hideOtherProjects": "Hide Other Projects",
     "viewProject": "View Project",
+    "viewMore": "View More",
     "viewCode": "View Code",
+    "featuredProjects": [
+      {"id": 6},
+      {"id": 7},
+      {"id": 8},
+      {"id": 9}
+    ],
     "list": [
       {
         "id": 1,
@@ -206,6 +213,23 @@
     "myGithub": "https://github.com/natelandrum",
     "myCV": "My Resume"
   },
+  "navCards": [
+    {
+      "cardTitle": "My Projects",
+      "cardDescription": "Explore a collection of projects showcasing my development skills.",
+      "cardLink": "/projects"
+        },
+        {
+      "cardTitle": "My Resume",
+      "cardDescription": "Review my background, education, and work experience.",
+      "cardLink": "/resume"
+        },
+        {
+      "cardTitle": "About Me",
+      "cardDescription": "Discover my journey, interests, and my passion for development.",
+      "cardLink": "/about"
+    }
+  ],
   "footer": {
     "rights": "All rights reserved",
     "quickLinks": "Quick Links",
