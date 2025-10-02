@@ -12,110 +12,162 @@
     touchIconClass?: "dark" | "light"
   }
 
-  // Reactive array to track which projects are visible
-  const visibleProjects = ref<number[]>([])
+  const showAllProjects = ref(false)
   
-  // Animation delay between each card (in milliseconds)
+  const visibleFeaturedProjects = ref<number[]>([])
+  const visibleOtherProjects = ref<number[]>([])
+  
   const animationDelay = 200
-  const minBatchSize = 3 // Minimum number of cards to show at once on mobile
 
-  // Computed updates on state changes
-  const projects = computed(() => {
+  const allProjects = computed(() => {
     return t('projects.list') as unknown as Project[]
   })
 
+  const featuredProjectIds = computed(() => {
+    return t('projects.featuredProjects') as unknown as { id: number }[]
+  })
+
+  const featuredProjects = computed(() => {
+    return allProjects.value.filter(project => 
+      featuredProjectIds.value.some(featured => featured.id === project.id)
+    )
+  })
+
+  const otherProjects = computed(() => {
+    return allProjects.value.filter(project => 
+      !featuredProjectIds.value.some(featured => featured.id === project.id)
+    )
+  })
+
+  const toggleOtherProjects = () => {
+    showAllProjects.value = !showAllProjects.value
+    
+    if (showAllProjects.value) {
+      // Animate other projects when expanded
+      otherProjects.value.forEach((project, index) => {
+        setTimeout(() => {
+          visibleOtherProjects.value.push(project.id)
+        }, index * animationDelay)
+      })
+    } else {
+      visibleOtherProjects.value = []
+    }
+  }
+
   onMounted(() => {
-    // Set up Intersection Observer to detect when project cards enter the viewport
+    // Set up Intersection Observer for featured projects
     const observerOptions = {
       root: null,
-      rootMargin: '0px 0px -10% 0px', // Detect a bit before fully visible
+      rootMargin: '0px 0px -10% 0px',
       threshold: 0.1
     }
-
-    // Check if on mobile
-    const isMobile = window.innerWidth < 768
 
     const observer = new IntersectionObserver((entries) => {
       const newlyVisibleProjects: number[] = []
 
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Get project id from data attribute
           const projectId = Number(entry.target.getAttribute('data-project-id'))
           
-          if (!visibleProjects.value.includes(projectId)) {
+          if (!visibleFeaturedProjects.value.includes(projectId)) {
             newlyVisibleProjects.push(projectId)
           }
           
-          // Once animation is triggered, no need to observe anymore
           observer.unobserve(entry.target)
         }
       })
 
       if (newlyVisibleProjects.length > 0) {
-        // On mobile, show cards in larger batches to avoid partial row animations
-        if (isMobile && newlyVisibleProjects.length < minBatchSize) {
-          // If we have fewer cards than the minimum batch size, find more nearby
-          const allProjectIds = projects.value.map(p => p.id)
-          const nextIds = allProjectIds.filter(id => 
-            !visibleProjects.value.includes(id) && 
-            !newlyVisibleProjects.includes(id)
-          ).slice(0, minBatchSize - newlyVisibleProjects.length)
-          
-          newlyVisibleProjects.push(...nextIds)
-        }
-
-        // Add all newly visible projects with staggered timing
         newlyVisibleProjects.forEach((id, index) => {
           setTimeout(() => {
-            visibleProjects.value.push(id)
+            visibleFeaturedProjects.value.push(id)
           }, index * animationDelay)
         })
       }
     }, observerOptions)
 
-    // Wait for DOM to be ready then observe all project cards
+    // Observe featured project cards when mounted
     nextTick(() => {
-      const projectCards = document.querySelectorAll('.project-card')
-      projectCards.forEach(card => {
+      const featuredCards = document.querySelectorAll('.featured-project-card')
+      featuredCards.forEach(card => {
         observer.observe(card)
       })
     })
   })
 
-  // Check if a project is visible
-  const isProjectVisible = (projectId: number) => {
-    return visibleProjects.value.includes(projectId)
+  // Check if a featured project is visible
+  const isFeaturedProjectVisible = (projectId: number) => {
+    return visibleFeaturedProjects.value.includes(projectId)
+  }
+
+  // Check if an other project is visible
+  const isOtherProjectVisible = (projectId: number) => {
+    return visibleOtherProjects.value.includes(projectId)
   }
 </script>
 
 <template>
   <section id="projects" class="projects-section px-6 py-20">
     <div class="container mx-auto max-w-[90%]">
-      <h2 class="mb-12 text-3xl font-bold text-center md:text-4xl">
-        {{ t('projects.title') }}
-      </h2>
-      <p class="mx-auto mb-12 max-w-2xl text-center text-gray-400">
-        {{ t('projects.description') }}
-      </p>
+      
+      <!-- Featured Projects Section -->
+      <div class="mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+          {{ t('projects.featuredTitle') }}
+        </h2>
+        
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div 
+            v-for="project in featuredProjects"
+            :key="project.id"
+            :data-project-id="project.id"
+            class="featured-project-card transition-all duration-700 transform"
+            :class="isFeaturedProjectVisible(project.id) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+          >
+            <ProjectCard
+              :id="project.id"
+              :title="project.title"
+              :description="project.description"
+              :image="project.image"
+            />
+          </div>
+        </div>
+      </div>
 
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Other Projects Section -->
+      <div v-if="otherProjects.length > 0" class="mt-16">
+        <div class="text-center mb-8">
+          <button
+            @click="toggleOtherProjects"
+            class="px-6 py-3 border-2 hover:scale-105 hover:cursor-pointer transition-all duration-300 rounded-lg font-semibold"
+          >
+            {{ showAllProjects ? t('projects.hideOtherProjects') : t('projects.showOtherProjects') }}
+          </button>
+        </div>
+
         <div 
-          v-for="project in projects"
-          :key="project.id"
-          :data-project-id="project.id"
-          class="project-card transition-all duration-700 transform"
-          :class="isProjectVisible(project.id) ? 'opacity-100' : 'opacity-0'"
+          class="overflow-hidden transition-all duration-700 ease-in-out"
+          :style="{
+            maxHeight: showAllProjects ? '2000px' : '0px',
+            opacity: showAllProjects ? 1 : 0,
+            marginTop: showAllProjects ? '0px' : '-32px'
+          }"
         >
-          <ProjectCard
-            :title="project.title"
-            :description="project.description"
-            :image="project.image"
-            :technologies="project.technologies"
-            :github-link="project.githubLink"
-            :demo-link="project.demoLink"
-            :touch-icon-class="project.touchIconClass"
-          />
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 pb-8">
+            <div 
+              v-for="project in otherProjects"
+              :key="project.id"
+              class="other-project-card transition-all duration-1000 transform"
+              :class="isOtherProjectVisible(project.id) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+            >
+              <ProjectCard
+                :id="project.id"
+                :title="project.title"
+                :description="project.description"
+                :image="project.image"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
