@@ -1,103 +1,39 @@
 <script setup lang="ts">
-import GithubIcon from '@/assets/icons/github.svg'
-import LinkIcon from '@/assets/icons/link.svg'
-import TouchIcon from '@/assets/icons/touch.svg'
-
-const { t } = useTranslation()
-const { isMobile, isDesktop } = useDevice()
-
-defineProps<{
+const props = defineProps<{
+  id: number
   title: string
   description: string
   image?: string
-  technologies: string[]
-  githubLink?: string
-  demoLink?: string
-  touchIconClass?: 'dark' | 'light'
 }>()
 
-const isExpanded = ref(false)
-const toggleExpanded = () => (isExpanded.value = !isExpanded.value)
+const navigateToProject = () => {
+  // Navigate to project detail page
+  navigateTo(`/projects/${props.id}`)
+}
 
+const { t } = useTranslation();
 </script>
 
 
 <template>
   <div
-    class="bg-[var(--color-background)] rounded-lg overflow-hidden shadow-lg transition-all duration-300 border border-gray-200 h-full flex flex-col relative group"
-    @click="(isMobile && !isDesktop) ? toggleExpanded() : null"
+    class="bg-[var(--color-background)] rounded-lg overflow-hidden shadow-lg transition-all duration-300 border border-gray-200 h-full flex flex-col cursor-pointer hover:shadow-xl hover:scale-105"
+    @click="navigateToProject"
   >
-    <!-- Description overlay that animates based on hover (desktop) or tap (mobile) -->
-    <div 
-      class="absolute inset-0 bg-black bg-opacity-90 flex justify-center p-6 transition-transform duration-300 transform" 
-      :class="[
-        isMobile ? (isExpanded ? 'translate-y-0' : '-translate-y-full') : 'group-hover:translate-y-0 -translate-y-full'
-      ]"
-    >
-      <div class="text-center max-h-[calc(100%-100px)] overflow-auto w-full">
-        <p class="text-white font-bold text-lg tracking-wide description-text">{{ description }}</p>
-      </div>
-    </div>
-    
-    <!-- Mobile touch indicator to show there's more info -->
-    <TouchIcon
-      v-if="isMobile && !isExpanded" 
-      class="absolute top-3 right-5 w-8 h-8 rounded-full animate-pulse"
-      :class="touchIconClass === 'light' ? 'text-white' : 'text-gray-800'"
-      aria-hidden="true"
-    ></TouchIcon>
-
     <!-- Project Image -->
     <div class="h-48 bg-gradient-to-r from-gray-800 to-gray-700 flex justify-center">
       <img v-if="image" :src="image" :alt="title" class="w-full h-full object-cover" />
-      <div v-else class="text-light text-xl font-bold px-4 text-center">{{ title }}</div>
+      <div v-else class="text-light text-xl font-bold px-4 text-center flex items-center">{{ title }}</div>
     </div>
 
     <!-- Project Content -->
-    <div class="flex-grow flex flex-col">
-      <h3 class="text-xl p-6 font-bold text-light">{{ title }}</h3>
-
-      <!-- Technologies -->
-      <div class="p-6 pt-0">
-        <div class="flex flex-wrap gap-2">
-          <span
-            v-for="tech in technologies"
-            :key="tech"
-            class="px-3 py-1 bg-gray-800 text-primary text-sm rounded-full hover:bg-gray-700 transition-colors"
-          >
-            {{ tech }}
-          </span>
-        </div>
-      </div>
+    <div class="flex-grow flex flex-col p-6">
+      <h3 class="text-xl font-bold text-light mb-3">{{ title }}</h3>
+      <p class="text-gray-400 text-sm line-clamp-3 flex-grow">{{ description }}</p>
       
-      <!-- Links - Moved to be above the absolute overlay -->
-      <div class="relative z-10 flex flex-wrap justify-center gap-3 px-4 pb-4 mt-auto">
-        <a
-          v-if="githubLink"
-          :href="githubLink"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="green"
-          @click.stop
-        >
-          <span class="flex items-center">
-            <GithubIcon class="h-5 w-5 mr-1" />
-            {{ t('projects.viewCode') }}
-          </span>
-        </a>
-        <a
-          v-if="demoLink"
-          :href="demoLink"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="green"
-          @click.stop
-        >
-          <span class="flex items-center">
-            <LinkIcon class="h-5 w-5 mr-1" />
-            {{ t('projects.viewProject') }}
-          </span>
-        </a>
+      <!-- Click to learn more indicator -->
+      <div class="mt-4 text-center">
+        <span class="text-primary text-sm font-medium">{{ t("projects.viewMore") }} →</span>
       </div>
     </div>
   </div>
