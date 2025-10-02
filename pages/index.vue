@@ -27,11 +27,6 @@
   <div>
     <Hero />
     <hr class="border-t border-gray-200">
-    <Project />
-    <hr class="border-t border-gray-200">
-    <Skills />
-    <hr class="border-t border-gray-200">
-    <Contact />
-    <hr class="border-t border-gray-200">
+    <NavCards />
   </div>
 </template>
