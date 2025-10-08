@@ -21,159 +21,330 @@
     "viewProject": "View Project",
     "viewMore": "View More",
     "viewCode": "View Code",
+    "backToProjects": "Back to Projects",
+    "loading": "Loading...",
+    "notFound": "Project Not Found",
+    "notFoundDescription": "The project you are looking for does not exist. Please check the URL or return to the projects page.",
+    "overview": "Project Overview",
+    "keyFeatures": "Key Features & Functionality",
+    "gallery": "Project Gallery",
+    "technologies": "Tech Stack",
+    "info": "Project Information",
+    "status": "Status",
+    "statuses": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "type": "Type",
+    "types": {
+      "web": "Web Application",
+      "mobile": "Mobile Application",
+      "desktop": "Desktop Application",
+      "library": "Library/Package",
+      "tool": "Tool/Utility",
+      "other": "Other"
+    },
+    "platform": "Platform",
+    "platforms": {
+      "vercel": "Vercel",
+      "railway": "Railway",
+      "netlify": "Netlify",
+      "githubPages": "GitHub Pages",
+      "heroku": "Heroku",
+      "aws": "AWS",
+      "firebase": "Firebase",
+      "digitalOcean": "DigitalOcean",
+      "azure": "Azure",
+      "render": "Render",
+      "other": "Other",
+      "chromeWebStore": "Chrome Web Store"
+    },
     "featuredProjects": [
+      {"id": 4},
+      {"id": 5},
       {"id": 6},
-      {"id": 7},
-      {"id": 8},
-      {"id": 9}
+      {"id": 7}
     ],
     "list": [
       {
-        "id": 1,
-        "title": "Handcrafted Haven",
-        "description": "A web application connecting artisans with customers who appreciate handmade products. It serves as a digital marketplace, fostering community, supporting local artisans, and promoting sustainable consumption.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744568216/handcrafted-haven_qugba3.png",
-        "technologies": [
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Typescript",
-          "MUI Material",
-          "Cloudinary",
-          "Postgres"
-        ],
-        "githubLink": "https://github.com/natelandrum/handcrafted-haven",
-        "demoLink": "https://handcrafted-haven-nu-khaki.vercel.app/",
-        "touchIconClass": "dark"
+      "id": 1,
+      "title": "FileX",
+      "description": "A modern file-sharing application built with Next.js and TypeScript, featuring drag-and-drop uploads, real-time notifications, and seamless file management. FileX combines elegant UI design with robust backend functionality for effortless file sharing and organization.",
+      "features": [
+        {
+        "title": "Drag & Drop Interface",
+        "description": "Intuitive file upload system with drag-and-drop functionality, progress indicators, and real-time upload status. Support for multiple file types with automatic file validation and size checking."
+        },
+        {
+        "title": "Time-Based File Organization",
+        "description": "Files are automatically organized by upload date with recent files prominently displayed. Files older than 3 days are intelligently archived in a collapsible section, keeping your workspace clean while maintaining easy access to all uploads."
+        },
+        {
+        "title": "One-Click Downloads",
+        "description": "File Saver integration enables instant file downloads with a single click. Users can download individual files or bulk download multiple files as ZIP archives without complicated steps."
+        },
+        {
+        "title": "Animated User Experience",
+        "description": "Framer Motion powers smooth animations throughout the interface, from file upload progress to page transitions. Material-UI components ensure consistent, accessible design patterns."
+        },
+        {
+        "title": "Cloud Storage Integration",
+        "description": "Cloudinary backend handles file storage, optimization, and delivery with PostgreSQL database for metadata management. Secure file access controls and sharing permissions protect user data."
+        }
+      ],
+      "status": "active",
+      "type": "web",
+      "platform": "vercel",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744569660/file-sharing_usntfc.png",
+      "galleryImages": [],
+      "technologies": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Typescript",
+        "MUI Material",
+        "Framer Motion",
+        "File Saver",
+        "Jszip",
+        "Cloudinary",
+        "Vercel Postgres"
+      ],
+      "githubLink": "https://github.com/natelandrum/file-sharing-system",
+      "demoLink": "https://file-sharing.nlandrum.dev/"
       },
       {
-        "id": 2,
-        "title": "Family Recipe Vault",
-        "description": "The Family Recipe Vault is a secure and collaborative digital platform designed to preserve, organize, and share family recipes. This project aims to address the challenge of maintaining family culinary traditions by providing a centralized space for recipe storage, historical context, and collaboration among family members.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744569156/family-recipe-vault_npgesp.png",
-        "technologies": [
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Typescript",
-          "MUI Material",
-          "Framer Motion",
-          "Cloudinary",
-          "Vercel Postgres"
-        ],
-        "githubLink": "https://github.com/natelandrum/family-recipe-vault",
-        "demoLink": "https://family-recipe-vault.vercel.app/",
-        "touchIconClass": "dark"
+      "id": 2,
+      "title": "Task Manager Todo List",
+      "description": "A comprehensive task management application built with Next.js, TypeScript, and Prisma ORM. Features secure authentication, real-time task updates, and an intuitive interface for personal productivity and task organization.",
+      "features": [
+        {
+        "title": "Inline Task Editing",
+        "description": "Edit tasks directly in the list without navigating to separate pages. Click-to-edit functionality ensures quick task updates and seamless workflow management."
+        },
+        {
+        "title": "Secure Authentication",
+        "description": "NextAuth integration with Google provider offers secure user authentication. Personal task lists remain private and accessible only to authenticated users through their Google account."
+        },
+        {
+        "title": "Smart Task Organization",
+        "description": "Organize tasks with priority levels, due dates, and completion status. Filtering and sorting options help users focus on what matters most and track their productivity."
+        },
+        {
+        "title": "Responsive Design System",
+        "description": "Material-UI components with Tailwind CSS create a consistent, accessible interface across all devices. Dark and light theme support adapts to user preferences."
+        },
+        {
+        "title": "Database Persistence",
+        "description": "Prisma ORM with PostgreSQL ensures reliable data storage and retrieval. Real-time updates and optimistic UI updates provide instant feedback while maintaining data integrity."
+        }
+      ],
+      "status": "active",
+      "type": "web",
+      "platform": "vercel",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744569906/todo_zyryav.png",
+      "galleryImages": [],
+      "technologies": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Typescript",
+        "MUI Material",
+        "NextAuth",
+        "Prisma"
+      ],
+      "githubLink": "https://github.com/natelandrum/todo-list",
+      "demoLink": "https://todo.nlandrum.dev/"
       },
       {
-        "id": 3,
-        "title": "FileX",
-        "description": "FileX is a sleek file-sharing application with built-in error notifications. It allows users to upload, download, and manage files effortlessly while ensuring a seamless user experience with real-time feedback and modern UI animations.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744569660/file-sharing_usntfc.png",
-        "technologies": [
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Typescript",
-          "MUI Material",
-          "Framer Motion",
-          "File Saver",
-          "Jszip",
-          "Cloudinary",
-          "Vercel Postgres"
-        ],
-        "githubLink": "https://github.com/natelandrum/file-sharing-system",
-        "demoLink": "https://file-sharing.nlandrum.dev/",
-        "touchIconClass": "light"
+      "id": 3,
+      "title": "Real-Time Chat App",
+      "description": "A sophisticated real-time messaging application built with Next.js, Ably realtime infrastructure, and Redux state management. Features instant messaging, conversation management, and seamless multi-user communication with modern UI patterns and data persistence.",
+      "features": [
+        {
+          "title": "Google Authentication",
+          "description": "Secure user authentication powered by NextAuth with Google provider integration. Users can sign in with their Google accounts for personalized conversations and message history."
+        },
+        {
+        "title": "Real-Time Messaging",
+        "description": "Instant message delivery powered by Ably's realtime infrastructure. Messages appear immediately across all connected clients."
+        },
+        {
+        "title": "Advanced Message Management",
+        "description": "Edit and delete messages with hover-activated context menus. Message history with timestamps."
+        },
+        {
+        "title": "Infinite Scroll & Performance",
+        "description": "React Query enables efficient infinite scrolling through conversation history with automatic caching and background updates. Optimized rendering handles thousands of messages smoothly."
+        },
+        {
+        "title": "Global State Management",
+        "description": "Redux toolkit manages complex application state including user sessions, conversation lists, message threads, and real-time connection status across the entire application."
+        },
+        {
+        "title": "Multi-User Conversations",
+        "description": "Create group chats, manage conversation members, and handle multiple concurrent discussions. PostgreSQL database ensures message persistence and conversation history retention."
+        }
+      ],
+      "status": "inactive",
+      "type": "web",
+      "platform": "vercel",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744571362/chat-app_rxfywf.png",
+      "galleryImages": [],
+      "technologies": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Typescript",
+        "MUI Material",
+        "Ably",
+        "Redux",
+        "React Query",
+        "Vercel Postgres"
+      ],
+      "githubLink": "https://github.com/natelandrum/chat-app",
+      "demoLink": "https://chat.nlandrum.dev/"
       },
       {
-        "id": 4,
-        "title": "Task Manager Todo List",
-        "description": "A task management application built with Next.js, TypeScript, and Prisma. Users can add, edit, and manage tasks in place using an intuitive UI.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744569906/todo_zyryav.png",
-        "technologies": [
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Typescript",
-          "MUI Material",
-          "NextAuth",
-          "Prisma"
-        ],
-        "githubLink": "https://github.com/natelandrum/todo-list",
-        "demoLink": "https://todo.nlandrum.dev/",
-        "touchIconClass": "light"
+      "id": 4,
+      "title": "Sudoku Solver",
+      "description": "A full-featured Sudoku web application built with Erlang, React, and Next.js, deployed on Railway with Docker for scalability. The app offers both puzzle solving and interactive gameplay with smart input validation and error checking. Features include multi-difficulty puzzle generation, real-time duplicate detection, and an intuitive interface that supports keyboard navigation and automatic cell advancement.",
+      "features": [
+        {
+        "title": "Smart Sudoku Input",
+        "description": "Paste a full puzzle (81 numbers with 0 for blanks) to instantly populate the board. As you type, cells auto-advance, highlight duplicates in rows/columns, and support intuitive keyboard navigation (arrow keys, backspace erase)."
+        },
+        {
+        "title": "Sudoku Solver Engine",
+        "description": "Backend written in Erlang using a recursive backtracking algorithm to validate and solve any puzzle."
+        },
+        {
+        "title": "Play Mode",
+        "description": "Generate puzzles across five difficulty levels (Easy → Evil). Error checking highlights invalid moves, prevents overwriting correct numbers, and tracks your mistakes until victory."
+        },
+        {
+        "title": "Responsive Web UI",
+        "description": "Built with React, Next.js, Tailwind CSS, and TypeScript for smooth, modern interactions across devices."
+        },
+        {
+        "title": "Containerized & Deployed",
+        "description": "Backend and frontend packaged with Docker and deployed on Railway for easy scalability and hosting."
+        }
+      ],
+      "status": "active",
+      "type": "web",
+      "platform": "railway",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744572725/sudoku-solver_p1ektk.png",
+      "galleryImages": [],
+      "technologies": [
+        "Erlang",
+        "Next.js",
+        "React",
+        "Typescript",
+        "Tailwind CSS",
+        "Docker"
+      ],
+      "githubLink": "https://github.com/natelandrum/sudoku_solver",
+      "demoLink": "https://sudoku-solver.nlandrum.dev/"
       },
       {
-        "id": 5,
-        "title": "Real-Time Chat App",
-        "description": "A modern, real-time chat application with infinite scroll, multi-user conversations, edit and delete functionality, hover menus, global state, and data persistence.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744571362/chat-app_rxfywf.png",
-        "technologies": [
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Typescript",
-          "MUI Material",
-          "Ably",
-          "Redux",
-          "React Query",
-          "Vercel Postgres"
-        ],
-        "githubLink": "https://github.com/natelandrum/chat-app",
-        "demoLink": "https://chat.nlandrum.dev/",
-        "touchIconClass": "light"
+      "id": 5,
+      "title": "Vocab Extractor Extension",
+      "description": "A Chrome browser extension built with HTML, CSS, and vanilla JavaScript for extracting vocabulary data from Duolingo practice word sessions. Designed for simplicity and efficiency, this lightweight extension operates entirely within the browser, ensuring user privacy and minimal resource usage.",
+      "features": [
+        {
+        "title": "Duolingo Integration",
+        "description": "Seamlessly extracts vocabulary words, translations, and context from active Duolingo practice sessions without interfering with the learning experience or requiring manual input."
+        },
+        {
+        "title": "JSON Export System",
+        "description": "Automatically formats extracted vocabulary into clean, structured JSON with word and translation pairs."
+        },
+        {
+        "title": "One-Click Operation",
+        "description": "Simple browser extension interface with single-click vocabulary extraction. No complex setup required - works immediately after installation from the Chrome Web Store. No need to input usersnames, passwords, or personal data."
+        },
+        {
+        "title": "Lightweight & Secure",
+        "description": "Built with vanilla HTML, CSS, and JavaScript for minimal resource usage. No external dependencies or data collection - all processing happens locally in the browser."
+        }
+      ],
+      "type": "tool",
+      "platform": "chromeWebStore",
+      "status": "active",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1747607103/Screenshot_2025-05-18_162453_l4sgz2.png",
+      "galleryImages": [],
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "demoLink": "https://chromewebstore.google.com/detail/vocab-extractor/mdgbblkeiiflhnfhipkholfpbmpdfpfo"
       },
       {
-        "id": 6,
-        "title": "Sudoku Solver",
-        "description": "Sudoku Solver using Erlang. This solver checks if a Sudoku puzzle is valid and solves it using a backtracking recursive algorithm. It also provides a web interface built with Next.js and React. Both the backend and frontend are containerized using Docker, allowing for easy deployment and scalability.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744572725/sudoku-solver_p1ektk.png",
-        "technologies": [
-          "Erlang",
-          "Next.js",
-          "React",
-          "Typescript",
-          "Tailwind CSS",
-          "Docker"
-        ],
-        "githubLink": "https://github.com/natelandrum/sudoku_solver",
-        "demoLink": "https://sudoku-solver.nlandrum.dev/",
-        "touchIconClass": "light"
+      "id": 6,
+      "title": "Flashcards site",
+      "description": "A comprehensive flashcard study application built with Nuxt.js, Vue 3, and TypeScript. Features touch-friendly interactions and seamless card management for effective language learning and knowledge retention.",
+      "features": [
+        {
+        "title": "Touch-Optimized Interface",
+        "description": "Responsive design with gesture support for mobile and tablet devices. Swipe to flip cards, tap to reveal answers, and intuitive touch controls make studying comfortable on any device."
+        },
+        {
+        "title": "Flexible Card Management",
+        "description": "Upload flashcards via JSON import, create custom decks, and organize cards by topic or difficulty."
+        },
+        {
+        "title": "Progress Tracking & Study Controls",
+        "description": "Visual progress indicators show words mastered, completion percentage through card decks, and study session statistics. Shuffle mode randomizes card order for varied practice, while progress bars track your learning journey and maintain motivation."
+        },
+        {
+        "title": "Offline Support",
+        "description": "Progressive Web App capabilities enable studying without internet connection. Local storage preserves your progress and deck data, syncing seamlessly when back online."
+        },
+        {
+        "title": "Seamless Performance",
+        "description": "Nuxt.js server-side rendering ensures fast loading times while Vue 3's Composition API provides smooth animations and responsive interactions throughout the study experience."
+        }
+      ],
+      "status": "active",
+      "type": "web",
+      "platform": "vercel",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1747606991/Screenshot_2025-05-18_162041_uwwhsb.png",
+      "galleryImages": [],
+      "technologies": ["Nuxt.js", "Vue", "TypeScript", "Tailwind CSS"],
+      "githubLink": "https://github.com/natelandrum/flashcard-site",
+      "demoLink": "https://flashcards.nlandrum.dev/"
       },
       {
-        "id": 7,
-        "title": "Vocab Extractor Extension",
-        "description": "A tool for extracting vocabulary from Duolingo words practice in a JSON format for personal use or with my flashcards site. (Available in the Chrome Web Store)",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1747607103/Screenshot_2025-05-18_162453_l4sgz2.png",
-        "technologies": ["HTML", "CSS", "JavaScript"],
-        "demoLink": "https://chromewebstore.google.com/detail/vocab-extractor/mdgbblkeiiflhnfhipkholfpbmpdfpfo",
-        "touchIconClass": "light"
-      },
-      {
-        "id": 8,
-        "title": "Flashcards site",
-        "description": "A web application for uploading, studying, and managing flashcards. Built with Nuxt.js, Vue, TypeScript, and Tailwind CSS, it offers a user-friendly interface with smooth animations and seamless performance. It is designed for desktop and touch devices, ensuring a responsive experience.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1747606991/Screenshot_2025-05-18_162041_uwwhsb.png",
-        "technologies": ["Nuxt.js", "Vue", "TypeScript", "Tailwind CSS"],
-        "githubLink": "https://github.com/natelandrum/flashcard-site",
-        "demoLink": "https://flashcards.nlandrum.dev/",
-        "touchIconClass": "light"
-      },
-      {
-        "id": 9,
-        "title": "QR Code Generator",
-        "description": "A simple QR code generator built with HTML, CSS, and JavaScript. It allows users to create QR codes for URLs, text, wifi, and contacts. You can customize the colors and download the generated QR code as a PNG image.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1759121429/Screenshot_2025-09-28_224313_jvkbjk.png",
-        "technologies": ["HTML", "CSS", "JavaScript"],
-        "githubLink": "https://github.com/natelandrum/qr-code-generator",
-        "demoLink": "https://qr-generator.nlandrum.dev/",
-        "touchIconClass": "dark"
+      "id": 7,
+      "title": "QR Code Generator",
+      "description": "A versatile QR code generation tool built with vanilla JavaScript, HTML, and CSS. Creates customizable QR codes for multiple content types including URLs, text, WiFi credentials, and contact information with instant preview and download capabilities.",
+      "features": [
+        {
+        "title": "Multi-Format Support",
+        "description": "Generate QR codes for various content types including web URLs, plain text, WiFi network credentials, and vCard contact information. Automatic format detection and validation ensure proper QR code generation."
+        },
+        {
+        "title": "Visual Customization",
+        "description": "Customize QR code appearance with foreground and background color selection using an intuitive color picker interface. Generate updated QR codes with your chosen colors while maintaining scanability standards."
+        },
+        {
+        "title": "Instant Generation",
+        "description": "Client-side QR code generation with immediate preview after clicking the generate button. No server requests required - all processing happens locally in the browser using JavaScript for maximum speed and privacy."
+        },
+        {
+        "title": "High-Quality Export",
+        "description": "Download generated QR codes as high-resolution PNG images suitable for printing or digital use."
+        }
+      ],
+      "status": "active",
+      "type": "web",
+      "platform": "githubPages",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1759121429/Screenshot_2025-09-28_224313_jvkbjk.png",
+      "galleryImages": [],
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "githubLink": "https://github.com/natelandrum/qr-code-generator",
+      "demoLink": "https://qr-generator.nlandrum.dev/"
       }
     ]
   },
   "skills": {
-    "title": "The skills, tools, and technologies I use:",
     "icons": {
       "vue": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
       "react": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -234,5 +405,133 @@
     "rights": "All rights reserved",
     "quickLinks": "Quick Links",
     "aboutDeveloper": "A passionate software developer specializing in building modern web applications with Vue, React, Nuxt.js, and Next.js."
+  },
+  "resume": {
+    "name": "Nathan Ray Landrum",
+    "email": "nlandrum.dev@gmail.com",
+    "phone": "+52 (563) 095-4842",
+    "linkedin": {
+      "text": "linkedin.com/in/nathan-landrum-dev",
+      "url": "https://linkedin.com/in/nathan-landrum-dev"
+    },
+    "portfolio": {
+      "text": "portfolio.nlandrum.dev",
+      "url": "https://portfolio.nlandrum.dev"
+    },
+    "summary": {
+      "title": "Software Developer | Frontend & Full-Stack Focus",
+      "points": [
+      "Motivated developer focused on building accessible, user-focused applications.",
+      "Hands-on experience with React, Vue, and full-stack development in academic and project settings.",
+      "Background in front-end frameworks, backend systems, and agile workflows."
+      ]
+    },
+    "skills": {
+      "title": "The skills, tools, and technologies I use:",
+      "frontend": [
+        "React",
+        "Vue",
+        "Next.js",
+        "Nuxt.js",
+        "HTML/CSS",
+        "Tailwind CSS",
+        "responsive design",
+        "accessibility",
+        "animations"
+      ],
+      "backend": ["Node.js/Express", ".Net", "Flask", "Django"],
+      "languages": ["JavaScript", "TypeScript", "Python", "C#", "SQL"],
+      "databases": [
+        "PostgreSQL",
+        "MongoDB",
+        "SQLite (schema design and optimization)"
+      ],
+      "devops": ["Git", "GitHub", "Vercel", "Netlify", "CI/CD pipelines"],
+      "practices": [
+        "Agile Scrum",
+        "test-driven development",
+        "iterative design"
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "degrees": [
+        {
+          "degree": "Bachelor of Applied Science in Software Development",
+          "school": "Brigham Young University-Idaho",
+          "date": "Expected December 2025",
+          "gpa": "4.0 GPA",
+          "details": [
+            "Built and deployed scalable web applications using front-end and backend frameworks.",
+            "Collaborated in agile teams to deliver features and debug production issues."
+          ]
+        },
+        {
+          "degree": "Bachelor of Aeronautic Engineering",
+          "school": "Instituto Politécnico Nacional",
+          "date": "April 2021",
+          "gpa": "3.4 GPA",
+          "details": [
+            "Built a solid foundation in mathematics, physics, and programming.",
+            "Specialized in aeronautic maintenance and manufacturing practices."
+          ]
+        }
+      ],
+      "certificates": {
+        "title": "Certificates",
+        "details": [
+          "Web and Computer Programming",
+          "Web Development",
+          "Software Development"
+        ]
+      },
+      "portfolioLabel": "Portfolio:",
+      "portfolioUrl": "https://portfolio.nlandrum.dev"
+    },
+    "experience": {
+      "title": "Experience",
+      "jobs": [
+        {
+          "title": "Industrial Electrician Apprentice",
+          "company": "Sikes Electric",
+          "date": "February 2022 - December 2022",
+          "details": [
+            "Assisted in electrical installations, including pulling wire, setting up rigid tubing, and wiring lighting systems, motors, and control equipment.",
+            "Performed plant maintenance and installed wire trays to support electrical infrastructure.",
+            "Gained practical experience in industrial electrical systems under supervision of licensed electricians."
+          ]
+        },
+        {
+          "title": "Manufacturing Depot Intern",
+          "company": "Instituto Politécnico Nacional",
+          "date": "January 2021 - April 2021",
+          "details": [
+            "Managed Inventory by controlling input/output of materials in the manufacturing depot.",
+            "Delivered hands-on laboratory instruction in machining (lathe, mill), welding, and safety procedures.",
+            "Contributed to maintenance and projects that improved workshop functionality and student learning spaces."
+          ]
+        },
+        {
+          "title": "English Teacher (ESL)",
+          "company": "Centro de Idiomas CEC",
+          "date": "September 2016 - 2021",
+          "details": [
+            "Taught English as a Second Language to students across varying proficiency levels, adapting lesson plans to suit individual learning needs.",
+            "Assisted in curriculum development and peer-reviewed classroom practices to improve teaching quality.",
+            "Provided administrative support, including front-office assistance for prospective students and payment processing."
+          ]
+        },
+        {
+          "title": "Inventory & Purchasing Assistant",
+          "company": "Barnett's Repair Shop",
+          "date": "2011 - 2015",
+          "details": [
+            "Monitored stock levels, ensuring availability of parts and supplies critical to daily operations.",
+            "Managed purchasing within budget constraints, coordinating with suppliers for timely deliveries.",
+            "Supported workshop efficiency by maintaining accurate inventory records."
+          ]
+        }
+      ]
+    }
   }
 }

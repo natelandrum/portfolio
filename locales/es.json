@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "Software Portfolio",
-    "description": "I'm a software developer specializing in building modern web applications with Vue, React, Nuxt.js, and Next.js. I have a passion for creating beautiful, responsive user interfaces with clean code."
+    "title": "Portafolio de Software",
+    "description": "Soy un desarrollador de software especializado en la construcción de aplicaciones web modernas con Vue, React, Nuxt.js y Next.js. Tengo una pasión por crear interfaces de usuario hermosas y responsivas con código limpio."
   },
   "navbar": {
     "home": "Inicio",
@@ -23,154 +23,311 @@
     "viewProject": "Ver Proyecto",
     "viewMore": "Ver Más",
     "viewCode": "Ver Código",
-    "featuredProjects": [
-      {"id": 6},
-      {"id": 7},
-      {"id": 8},
-      {"id": 9}
-    ],
+    "backToProjects": "Volver a Proyectos",
+    "overview": "Resumen",
+    "keyFeatures": "Características Clave",
+    "gallery": "Galería",
+    "info": "Información del Proyecto",
+    "technologies": "Tecnologías",
+    "status": "Estado",
+    "statuses": {
+      "active": "Activo",
+      "inactive": "Inactivo"
+    },
+    "type": "Tipo",
+    "types": {
+      "web": "Aplicación Web",
+      "mobile": "Aplicación Móvil",
+      "desktop": "Aplicación de Escritorio",
+      "library": "Librería/Paquete",
+      "tool": "Herramienta/Utilidad",
+      "other": "Otro"
+    },
+    "platform": "Plataforma",
+    "platforms": {
+      "vercel": "Vercel",
+      "railway": "Railway",
+      "netlify": "Netlify",
+      "githubPages": "GitHub Pages",
+      "heroku": "Heroku",
+      "aws": "AWS",
+      "firebase": "Firebase",
+      "digitalOcean": "DigitalOcean",
+      "azure": "Azure",
+      "render": "Render",
+      "chromeWebStore": "Chrome Web Store",
+      "other": "Otro"
+    },
+    "featuredProjects": [{ "id": 4 }, { "id": 5 }, { "id": 6 }, { "id": 7 }],
     "list": [
       {
-        "id": 1,
-        "title": "Handcrafted Haven",
-        "description": "Una aplicación web que conecta a artesanos con clientes que aprecian productos hechos a mano. Sirve como un mercado digital, fomentando la comunidad, apoyando a los artesanos locales y promoviendo el consumo sostenible.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744568216/handcrafted-haven_qugba3.png",
-        "technologies": [
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Typescript",
-          "MUI Material",
-          "Cloudinary",
-          "Postgres"
-        ],
-        "githubLink": "https://github.com/natelandrum/handcrafted-haven",
-        "demoLink": "https://handcrafted-haven-nu-khaki.vercel.app/",
-        "touchIconClass": "dark"
+      "id": 1,
+      "title": "FileX",
+      "description": "Una aplicación moderna de intercambio de archivos construida con Next.js y TypeScript, con subidas de arrastrar y soltar, notificaciones en tiempo real y gestión de archivos sin problemas. FileX combina un diseño de interfaz elegante con funcionalidad robusta de backend para el intercambio y organización de archivos sin esfuerzo.",
+      "features": [
+        {
+        "title": "Interfaz de Arrastrar y Soltar",
+        "description": "Sistema intuitivo de subida de archivos con funcionalidad de arrastrar y soltar, indicadores de progreso y estado de subida en tiempo real. Soporte para múltiples tipos de archivo con validación automática y verificación de tamaño."
+        },
+        {
+        "title": "Organización de Archivos Basada en Tiempo",
+        "description": "Los archivos se organizan automáticamente por fecha de subida con archivos recientes mostrados de manera prominente. Los archivos de más de 3 días se archivan inteligentemente en una sección colapsable, manteniendo tu espacio de trabajo limpio mientras mantiene fácil acceso a todas las subidas."
+        },
+        {
+        "title": "Descargas de Un Solo Clic",
+        "description": "La integración de File Saver permite descargas instantáneas de archivos con un solo clic. Los usuarios pueden descargar archivos individuales o descargar múltiples archivos como archivos ZIP sin pasos complicados."
+        },
+        {
+        "title": "Experiencia de Usuario Animada",
+        "description": "Framer Motion potencia animaciones suaves a través de la interfaz, desde el progreso de subida de archivos hasta transiciones de página. Los componentes Material-UI aseguran patrones de diseño consistentes y accesibles."
+        },
+        {
+        "title": "Integración de Almacenamiento en la Nube",
+        "description": "Backend de Cloudinary maneja almacenamiento, optimización y entrega de archivos con base de datos PostgreSQL para gestión de metadatos. Controles seguros de acceso a archivos y permisos de compartir protegen los datos del usuario."
+        }
+      ],
+      "status": "active",
+      "type": "web",
+      "platform": "vercel",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744569660/file-sharing_usntfc.png",
+      "technologies": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Typescript",
+        "MUI Material",
+        "Framer Motion",
+        "File Saver",
+        "Jszip",
+        "Cloudinary",
+        "Vercel Postgres"
+      ],
+      "githubLink": "https://github.com/natelandrum/file-sharing-system",
+      "demoLink": "https://file-sharing.nlandrum.dev/"
       },
       {
-        "id": 2,
-        "title": "Family Recipe Vault",
-        "description": "El Family Recipe Vault es una plataforma digital segura y colaborativa diseñada para preservar, organizar y compartir recetas familiares. Este proyecto tiene como objetivo abordar el desafío de mantener las tradiciones culinarias familiares al proporcionar un espacio centralizado para el almacenamiento de recetas, contexto histórico y colaboración entre miembros de la familia.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744569156/family-recipe-vault_npgesp.png",
-        "technologies": [
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Typescript",
-          "MUI Material",
-          "Framer Motion",
-          "Cloudinary",
-          "Vercel Postgres"
-        ],
-        "githubLink": "https://github.com/natelandrum/family-recipe-vault",
-        "demoLink": "https://family-recipe-vault.vercel.app/",
-        "touchIconClass": "dark"
+      "id": 2,
+      "title": "Task Manager Todo List",
+      "description": "Una aplicación integral de gestión de tareas construida con Next.js, TypeScript y Prisma ORM. Presenta autenticación segura, actualizaciones de tareas en tiempo real y una interfaz intuitiva para productividad personal y organización de tareas.",
+      "features": [
+        {
+        "title": "Edición de Tareas en Línea",
+        "description": "Edita tareas directamente en la lista sin navegar a páginas separadas. La funcionalidad de hacer clic para editar asegura actualizaciones rápidas de tareas y gestión de flujo de trabajo sin problemas."
+        },
+        {
+        "title": "Autenticación Segura",
+        "description": "La integración NextAuth con el proveedor de Google ofrece autenticación segura de usuario. Las listas de tareas personales permanecen privadas y accesibles solo para usuarios autenticados a través de su cuenta de Google."
+        },
+        {
+        "title": "Organización Inteligente de Tareas",
+        "description": "Organiza tareas con niveles de prioridad, fechas de vencimiento y estado de finalización. Las opciones de filtrado y ordenamiento ayudan a los usuarios a enfocarse en lo que más importa y rastrear su productividad."
+        },
+        {
+        "title": "Sistema de Diseño Responsivo",
+        "description": "Los componentes Material-UI con Tailwind CSS crean una interfaz consistente y accesible en todos los dispositivos. El soporte de temas oscuros y claros se adapta a las preferencias del usuario."
+        },
+        {
+        "title": "Persistencia de Base de Datos",
+        "description": "Prisma ORM con PostgreSQL asegura almacenamiento y recuperación confiable de datos. Las actualizaciones en tiempo real y las actualizaciones optimistas de UI proporcionan retroalimentación instantánea mientras mantienen la integridad de los datos."
+        }
+      ],
+      "status": "active",
+      "type": "web",
+      "platform": "vercel",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744569906/todo_zyryav.png",
+      "technologies": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Typescript",
+        "MUI Material",
+        "NextAuth",
+        "Prisma"
+      ],
+      "githubLink": "https://github.com/natelandrum/todo-list",
+      "demoLink": "https://todo.nlandrum.dev/"
       },
       {
-        "id": 3,
-        "title": "FileX",
-        "description": "FileX es una aplicación de intercambio de archivos elegante con notificaciones de error integradas. Permite a los usuarios cargar, descargar y gestionar archivos sin esfuerzo, asegurando una experiencia de usuario fluida con retroalimentación en tiempo real y animaciones modernas de interfaz de usuario.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744569660/file-sharing_usntfc.png",
-        "technologies": [
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Typescript",
-          "MUI Material",
-          "Framer Motion",
-          "File Saver",
-          "Jszip",
-          "Cloudinary",
-          "Vercel Postgres"
-        ],
-        "githubLink": "https://github.com/natelandrum/file-sharing-system",
-        "demoLink": "https://file-sharing.nlandrum.dev/",
-        "touchIconClass": "light"
+      "id": 3,
+      "title": "Real-Time Chat App",
+      "description": "Una aplicación sofisticada de mensajería en tiempo real construida con Next.js, infraestructura en tiempo real de Ably y gestión de estado Redux. Presenta mensajería instantánea, gestión de conversaciones y comunicación multiusuario sin problemas con patrones de interfaz modernos y persistencia de datos.",
+      "features": [
+        {
+          "title": "Autenticación con Google",
+          "description": "Autenticación segura de usuario potenciada por NextAuth con integración del proveedor de Google. Los usuarios pueden iniciar sesión con sus cuentas de Google para conversaciones personalizadas e historial de mensajes."
+        },
+        {
+        "title": "Mensajería en Tiempo Real",
+        "description": "Entrega instantánea de mensajes potenciada por la infraestructura en tiempo real de Ably. Los mensajes aparecen inmediatamente en todos los clientes conectados."
+        },
+        {
+        "title": "Gestión Avanzada de Mensajes",
+        "description": "Edita y elimina mensajes con menús contextuales activados por hover. Historial de mensajes con marcas de tiempo."
+        },
+        {
+        "title": "Desplazamiento Infinito y Rendimiento",
+        "description": "React Query permite desplazamiento infinito eficiente a través del historial de conversaciones con caché automático y actualizaciones en segundo plano. Renderizado optimizado maneja miles de mensajes suavemente."
+        },
+        {
+        "title": "Gestión de Estado Global",
+        "description": "Redux toolkit gestiona estado complejo de aplicación incluyendo sesiones de usuario, listas de conversaciones, hilos de mensajes y estado de conexión en tiempo real a través de toda la aplicación."
+        },
+        {
+        "title": "Conversaciones Multiusuario",
+        "description": "Crea chats grupales, gestiona miembros de conversaciones y maneja múltiples discusiones concurrentes. La base de datos PostgreSQL asegura persistencia de mensajes y retención del historial de conversaciones."
+        }
+      ],
+      "status": "inactive",
+      "type": "web",
+      "platform": "vercel",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744571362/chat-app_rxfywf.png",
+      "technologies": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Typescript",
+        "MUI Material",
+        "Ably",
+        "Redux",
+        "React Query",
+        "Vercel Postgres"
+      ],
+      "githubLink": "https://github.com/natelandrum/chat-app",
+      "demoLink": "https://chat.nlandrum.dev/"
       },
       {
-        "id": 4,
-        "title": "Task Manager Todo List",
-        "description": "Una aplicación de gestión de tareas construida con Next.js, TypeScript y Prisma. Los usuarios pueden agregar, editar y gestionar tareas en su lugar utilizando una interfaz intuitiva.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744569906/todo_zyryav.png",
-        "technologies": [
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Typescript",
-          "MUI Material",
-          "NextAuth",
-          "Prisma"
-        ],
-        "githubLink": "https://github.com/natelandrum/todo-list",
-        "demoLink": "https://todo.nlandrum.dev/",
-        "touchIconClass": "light"
+      "id": 4,
+      "title": "Sudoku Solver",
+      "description": "Una aplicación web completa de Sudoku construida con Erlang, React y Next.js, desplegada en Railway con Docker para escalabilidad. La aplicación ofrece tanto resolución de rompecabezas como juego interactivo con validación inteligente de entrada y verificación de errores. Las características incluyen generación de rompecabezas de múltiples dificultades, detección de duplicados en tiempo real y una interfaz intuitiva que soporta navegación por teclado y avance automático de celdas.",
+      "features": [
+        {
+        "title": "Entrada Inteligente de Sudoku",
+        "description": "Pega un rompecabezas completo (81 números con 0 para espacios en blanco) para llenar instantáneamente el tablero. Mientras escribes, las celdas avanzan automáticamente, resaltan duplicados en filas/columnas y soportan navegación intuitiva por teclado (teclas de flecha, retroceso borra)."
+        },
+        {
+        "title": "Motor Solucionador de Sudoku",
+        "description": "Backend escrito en Erlang usando un algoritmo recursivo de retroceso para validar y resolver cualquier rompecabezas."
+        },
+        {
+        "title": "Modo de Juego",
+        "description": "Genera rompecabezas a través de cinco niveles de dificultad (Fácil → Diabólico). La verificación de errores resalta movimientos inválidos, previene sobrescribir números correctos y rastrea tus errores hasta la victoria."
+        },
+        {
+        "title": "Interfaz Web Responsiva",
+        "description": "Construida con React, Next.js, Tailwind CSS y TypeScript para interacciones suaves y modernas a través de dispositivos."
+        },
+        {
+        "title": "Containerizado y Desplegado",
+        "description": "Backend y frontend empaquetados con Docker y desplegados en Railway para fácil escalabilidad y alojamiento."
+        }
+      ],
+      "status": "active",
+      "type": "web",
+      "platform": "railway",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744572725/sudoku-solver_p1ektk.png",
+      "technologies": [
+        "Erlang",
+        "Next.js",
+        "React",
+        "Typescript",
+        "Tailwind CSS",
+        "Docker"
+      ],
+      "githubLink": "https://github.com/natelandrum/sudoku_solver",
+      "demoLink": "https://sudoku-solver.nlandrum.dev/"
       },
       {
-        "id": 5,
-        "title": "Real-Time Chat App",
-        "description": "Una aplicación de chat moderna y en tiempo real con desplazamiento infinito, conversaciones multiusuario, funcionalidad de edición y eliminación, menús emergentes, estado global y persistencia de datos.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744571362/chat-app_rxfywf.png",
-        "technologies": [
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Typescript",
-          "MUI Material",
-          "Ably",
-          "Redux",
-          "React Query",
-          "Vercel Postgres"
-        ],
-        "githubLink": "https://github.com/natelandrum/chat-app",
-        "demoLink": "https://chat.nlandrum.dev/",
-        "touchIconClass": "light"
+      "id": 5,
+      "title": "Vocab Extractor Extension",
+      "description": "Una extensión del navegador Chrome construida con HTML, CSS y vanilla JavaScript para extraer datos de vocabulario de sesiones de práctica de palabras de Duolingo. Diseñada para simplicidad y eficiencia, esta extensión ligera opera completamente dentro del navegador, asegurando privacidad del usuario y uso mínimo de recursos.",
+      "features": [
+        {
+        "title": "Integración con Duolingo",
+        "description": "Extrae perfectamente palabras de vocabulario, traducciones y contexto de sesiones activas de práctica de Duolingo sin interferir con la experiencia de aprendizaje o requerir entrada manual."
+        },
+        {
+        "title": "Sistema de Exportación JSON",
+        "description": "Formatea automáticamente vocabulario extraído en JSON limpio y estructurado con pares de palabras y traducciones."
+        },
+        {
+        "title": "Operación de Un Solo Clic",
+        "description": "Interfaz simple de extensión de navegador con extracción de vocabulario de un solo clic. No se requiere configuración compleja - funciona inmediatamente después de la instalación desde Chrome Web Store. No es necesario ingresar nombres de usuario, contraseñas o datos personales."
+        },
+        {
+        "title": "Ligero y Seguro",
+        "description": "Construido con HTML, CSS y JavaScript vanilla para uso mínimo de recursos. Sin dependencias externas o recolección de datos - todo el procesamiento ocurre localmente en el navegador."
+        }
+      ],
+      "type": "tool",
+      "platform": "chromeWebStore",
+      "status": "active",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1747607103/Screenshot_2025-05-18_162453_l4sgz2.png",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "demoLink": "https://chromewebstore.google.com/detail/vocab-extractor/mdgbblkeiiflhnfhipkholfpbmpdfpfo"
       },
       {
-        "id": 6,
-        "title": "Sudoku Solver",
-        "description": "Solucionador de Sudoku utilizando Erlang. Este solucionador verifica si un rompecabezas de Sudoku es válido y lo resuelve utilizando un algoritmo recursivo de retroceso. También proporciona una interfaz web construida con Next.js y React. Tanto el backend como el frontend están containerizados usando Docker, permitiendo una fácil implementación y escalabilidad.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744572725/sudoku-solver_p1ektk.png",
-        "technologies": [
-          "Erlang",
-          "Next.js",
-          "React",
-          "Typescript",
-          "Tailwind CSS",
-          "Docker"
-        ],
-        "githubLink": "https://github.com/natelandrum/sudoku_solver",
-        "demoLink": "https://sudoku-solver.nlandrum.dev/",
-        "touchIconClass": "light"
+      "id": 6,
+      "title": "Flashcards site",
+      "description": "Una aplicación integral de estudio con tarjetas didácticas construida con Nuxt.js, Vue 3 y TypeScript. Presenta algoritmos inteligentes de repetición espaciada, interacciones amigables al tacto y gestión perfecta de tarjetas para aprendizaje efectivo de idiomas y retención de conocimiento.",
+      "features": [
+        {
+        "title": "Interfaz Optimizada para Tacto",
+        "description": "Diseño responsivo con soporte de gestos para dispositivos móviles y tablets. Desliza para voltear tarjetas, toca para revelar respuestas y controles táctiles intuitivos hacen el estudio cómodo en cualquier dispositivo."
+        },
+        {
+        "title": "Gestión Flexible de Tarjetas",
+        "description": "Sube tarjetas didácticas vía importación JSON, crea mazos personalizados y organiza tarjetas por tema o dificultad."
+        },
+        {
+        "title": "Seguimiento de Progreso y Controles de Estudio",
+        "description": "Indicadores de progreso visual muestran palabras dominadas, porcentaje de finalización a través de mazos de tarjetas y estadísticas de sesiones de estudio. El modo aleatorio randomiza el orden de las tarjetas para práctica variada, mientras las barras de progreso rastrean tu jornada de aprendizaje y mantienen la motivación."
+        },
+        {
+        "title": "Soporte Sin Conexión",
+        "description": "Las capacidades de Aplicación Web Progresiva permiten estudiar sin conexión a internet. El almacenamiento local preserva tu progreso y datos de mazos, sincronizándose perfectamente cuando vuelves a estar en línea."
+        },
+        {
+        "title": "Rendimiento Perfecto",
+        "description": "El renderizado del lado del servidor de Nuxt.js asegura tiempos de carga rápidos mientras la API de Composición de Vue 3 proporciona animaciones suaves e interacciones responsivas durante toda la experiencia de estudio."
+        }
+      ],
+      "type": "web",
+      "status": "active",
+      "platform": "vercel",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1747606991/Screenshot_2025-05-18_162041_uwwhsb.png",
+      "technologies": ["Nuxt.js", "Vue", "TypeScript", "Tailwind CSS"],
+      "githubLink": "https://github.com/natelandrum/flashcard-site",
+      "demoLink": "https://flashcards.nlandrum.dev/"
       },
       {
-        "id": 7,
-        "title": "Vocab Extractor Extension",
-        "description": "Una herramienta para extraer vocabulario de la práctica de palabras de Duolingo en formato JSON para uso personal o con mi sitio de tarjetas didácticas. (Disponible en Chrome Web Store)",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1747607103/Screenshot_2025-05-18_162453_l4sgz2.png",
-        "technologies": ["HTML", "CSS", "JavaScript"],
-        "demoLink": "https://chromewebstore.google.com/detail/vocab-extractor/mdgbblkeiiflhnfhipkholfpbmpdfpfo",
-        "touchIconClass": "light"
-      },
-      {
-        "id": 8,
-        "title": "Flashcards site",
-        "description": "Una aplicación web para subir, estudiar y gestionar tarjetas didácticas. Construida con Nuxt.js, Vue, TypeScript y Tailwind CSS, ofrece una interfaz fácil de usar con animaciones fluidas y un rendimiento impecable. Está diseñada para dispositivos de escritorio y táctiles, asegurando una experiencia responsiva.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1747606991/Screenshot_2025-05-18_162041_uwwhsb.png",
-        "technologies": ["Nuxt.js", "Vue", "TypeScript", "Tailwind CSS"],
-        "githubLink": "https://github.com/natelandrum/flashcard-site",
-        "demoLink": "https://flashcards.nlandrum.dev/",
-        "touchIconClass": "light"
-      },
-      {
-        "id": 9,
-        "title": "QR Code Generator",
-        "description": "Un simple generador de códigos QR construido con HTML, CSS y JavaScript. Permite a los usuarios crear códigos QR para URLs, texto, wifi y contactos. Puedes personalizar los colores y descargar el código QR generado como una imagen PNG.",
-        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1759121429/Screenshot_2025-09-28_224313_jvkbjk.png",
-        "technologies": ["HTML", "CSS", "JavaScript"],
-        "githubLink": "https://github.com/natelandrum/qr-code-generator",
-        "demoLink": "https://qr-generator.nlandrum.dev/",
-        "touchIconClass": "dark"
+      "id": 7,
+      "title": "QR Code Generator",
+      "description": "Una herramienta versátil de generación de códigos QR construida con JavaScript vanilla, HTML y CSS. Crea códigos QR personalizables para múltiples tipos de contenido incluyendo URLs, texto, credenciales WiFi e información de contacto con vista previa instantánea y capacidades de descarga.",
+      "features": [
+        {
+        "title": "Soporte Multi-Formato",
+        "description": "Genera códigos QR para varios tipos de contenido incluyendo URLs web, texto plano, credenciales de red WiFi e información de contacto vCard. Detección automática de formato y validación aseguran generación adecuada de códigos QR."
+        },
+        {
+        "title": "Personalización Visual",
+        "description": "Personaliza apariencia de códigos QR con selección de colores de primer plano y fondo usando una interfaz intuitiva de selector de color. Genera códigos QR actualizados con tus colores elegidos mientras mantienes estándares de escaneabilidad."
+        },
+        {
+        "title": "Generación Instantánea",
+        "description": "Generación de códigos QR del lado del cliente con vista previa inmediata después de hacer clic en el botón generar. No se requieren solicitudes de servidor - todo el procesamiento ocurre localmente en el navegador usando JavaScript para máxima velocidad y privacidad."
+        },
+        {
+        "title": "Exportación de Alta Calidad",
+        "description": "Descarga códigos QR generados como imágenes PNG de alta resolución adecuadas para impresión o uso digital."
+        }
+      ],
+      "status": "active",
+      "type": "web",
+      "platform": "githubPages",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1759121429/Screenshot_2025-09-28_224313_jvkbjk.png",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "githubLink": "https://github.com/natelandrum/qr-code-generator",
+      "demoLink": "https://qr-generator.nlandrum.dev/"
       }
     ]
   },
@@ -236,5 +393,133 @@
     "rights": "Todos los derechos reservados",
     "quickLinks": "Enlaces Rápidos",
     "aboutDeveloper": "Un apasionado desarrollador de software especializado en la construcción de aplicaciones web modernas con Vue, React, Nuxt.js, y Next.js."
+  },
+  "resume": {
+    "name": "Nathan Ray Landrum",
+    "email": "nlandrum.dev@gmail.com",
+    "phone": "+52 (563) 095-4842",
+    "linkedin": {
+      "text": "linkedin.com/in/nathan-landrum-dev",
+      "url": "https://linkedin.com/in/nathan-landrum-dev"
+    },
+    "portfolio": {
+      "text": "portfolio.nlandrum.dev",
+      "url": "https://portfolio.nlandrum.dev"
+    },
+    "summary": {
+      "title": "Desarrollador de Software | Enfoque Frontend y Full-Stack",
+      "points": [
+        "Desarrollador motivado enfocado en construir aplicaciones accesibles y centradas en el usuario.",
+        "Experiencia práctica con React, Vue y desarrollo full-stack en entornos académicos y de proyectos.",
+        "Trasfondo en frameworks frontend, sistemas backend y flujos de trabajo ágiles."
+      ]
+    },
+    "skills": {
+      "title": "Las habilidades, herramientas y tecnologías que utilizo:",
+      "frontend": [
+        "React",
+        "Vue",
+        "Next.js",
+        "Nuxt.js",
+        "HTML/CSS",
+        "Tailwind CSS",
+        "diseño responsivo",
+        "accesibilidad",
+        "animaciones"
+      ],
+      "backend": ["Node.js/Express", ".Net", "Flask", "Django"],
+      "languages": ["JavaScript", "TypeScript", "Python", "C#", "SQL"],
+      "databases": [
+        "PostgreSQL",
+        "MongoDB",
+        "SQLite (diseño y optimización de esquemas)"
+      ],
+      "devops": ["Git", "GitHub", "Vercel", "Netlify", "pipelines CI/CD"],
+      "practices": [
+        "Agile Scrum",
+        "desarrollo dirigido por pruebas",
+        "diseño iterativo"
+      ]
+    },
+    "education": {
+      "title": "Educación",
+      "degrees": [
+        {
+          "degree": "Licenciatura en Ciencias Aplicadas en Desarrollo de Software",
+          "school": "Brigham Young University-Idaho",
+          "date": "Esperado Diciembre 2025",
+          "gpa": "Promedio 4.0",
+          "details": [
+            "Construí y desplegué aplicaciones web escalables usando frameworks frontend y backend.",
+            "Colaboré en equipos ágiles para entregar características y depurar problemas de producción."
+          ]
+        },
+        {
+          "degree": "Licenciatura en Ingeniería Aeronáutica",
+          "school": "Instituto Politécnico Nacional",
+          "date": "Abril 2021",
+          "gpa": "Promedio 3.4",
+          "details": [
+            "Construí una base sólida en matemáticas, física y programación.",
+            "Me especialicé en mantenimiento aeronáutico y prácticas de manufactura."
+          ]
+        }
+      ],
+      "certificates": {
+        "title": "Certificados",
+        "details": [
+          "Programación Web y de Computadoras",
+          "Desarrollo Web",
+          "Desarrollo de Software"
+        ]
+      },
+      "portfolioLabel": "Portafolio:",
+      "portfolioUrl": "https://portfolio.nlandrum.dev"
+    },
+    "experience": {
+      "title": "Experiencia",
+      "jobs": [
+        {
+          "title": "Aprendiz de Electricista Industrial",
+          "company": "Sikes Electric",
+          "date": "Febrero 2022 – Diciembre 2022",
+          "details": [
+            "Asistí en instalaciones eléctricas, incluyendo tirado de cables, configuración de tubería rígida y cableado de sistemas de iluminación, motores y equipos de control.",
+            "Realicé mantenimiento de planta e instalé bandejas de cables para apoyar la infraestructura eléctrica.",
+            "Obtuve experiencia práctica en sistemas eléctricos industriales bajo supervisión de electricistas licenciados."
+          ]
+        },
+        {
+          "title": "Interno de Depósito de Manufactura",
+          "company": "Instituto Politécnico Nacional",
+          "date": "Enero 2021 – Abril 2021",
+          "details": [
+            "Gestioné inventario controlando entrada/salida de materiales en el depósito de manufactura.",
+            "Impartí instrucción práctica de laboratorio en maquinado (torno, fresadora), soldadura y procedimientos de seguridad.",
+            "Contribuí al mantenimiento y proyectos que mejoraron la funcionalidad del taller y espacios de aprendizaje estudiantil."
+          ]
+        },
+        {
+          "title": "Profesor de Inglés (ESL)",
+          "company": "Centro de Idiomas CEC",
+          "date": "Septiembre 2016 – 2021",
+          "details": [
+            "Enseñé Inglés como Segundo Idioma a estudiantes de varios niveles de competencia, adaptando planes de lección para satisfacer necesidades individuales de aprendizaje.",
+            "Asistí en desarrollo curricular y revisé prácticas de aula entre pares para mejorar la calidad de enseñanza.",
+            "Proporcioné apoyo administrativo, incluyendo asistencia de recepción para estudiantes prospectivos y procesamiento de pagos."
+          ]
+        },
+        {
+          "title": "Asistente de Inventario y Compras",
+          "company": "Barnett's Repair Shop",
+          "date": "2011 – 2015",
+          "details": [
+            "Monitoreé niveles de stock, asegurando disponibilidad de partes y suministros críticos para operaciones diarias.",
+            "Gestioné compras dentro de restricciones presupuestales, coordinando con proveedores para entregas oportunas.",
+            "Apoyé la eficiencia del taller manteniendo registros precisos de inventario."
+          ]
+        }
+      ]
+    }
   }
 }
