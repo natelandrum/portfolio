@@ -448,7 +448,7 @@
           "degree": "Licenciatura en Ciencias Aplicadas en Desarrollo de Software",
           "school": "Brigham Young University-Idaho",
           "date": "Esperado Diciembre 2025",
-          "gpa": "Promedio 4.0",
+            "gpa": "Promedio 9.97",
           "details": [
             "Construí y desplegué aplicaciones web escalables usando frameworks frontend y backend.",
             "Colaboré en equipos ágiles para entregar características y depurar problemas de producción."
@@ -458,7 +458,7 @@
           "degree": "Licenciatura en Ingeniería Aeronáutica",
           "school": "Instituto Politécnico Nacional",
           "date": "Abril 2021",
-          "gpa": "Promedio 3.4",
+          "gpa": "Promedio 8.4",
           "details": [
             "Construí una base sólida en matemáticas, física y programación.",
             "Me especialicé en mantenimiento aeronáutico y prácticas de manufactura."
@@ -510,7 +510,7 @@
           ]
         },
         {
-          "title": "Asistente de Inventario y Compras",
+          "title": "Especialista de Inventario y Compras",
           "company": "Barnett's Repair Shop",
           "date": "2011 – 2015",
           "details": [
