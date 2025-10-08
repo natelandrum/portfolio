@@ -104,6 +104,12 @@
   const isOtherProjectVisible = (projectId: number) => {
     return visibleOtherProjects.value.includes(projectId)
   }
+
+  // Seo Meta
+  useSeoMeta({
+  title: 'Projects - Nathan Landrum',
+  description: 'Professional portfolio of Nathan Landrum - Software Developer specializing in frontend and full-stack development with React, Vue, and modern web technologies.'
+  })
 </script>
 
 <template>
