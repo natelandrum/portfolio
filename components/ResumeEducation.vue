@@ -45,7 +45,9 @@ const isExpanded = (index: number) => expandedItems.value.has(index)
         class="border-l-2 border-gray-200 pl-4"
       >
       <!-- Main Info (Always Visible) -->
-      <div class="flex justify-between items-start mb-2 rounded p-2 hover:bg-gray-100 transition-colors">
+      <div class="flex justify-between items-start mb-2 rounded p-2 hover:bg-gray-100 cursor-pointer transition-colors"
+        @click="toggleExpanded(index)"
+      >
           <div class="flex-1">
               <h3 class="text-sm font-semibold text-gray-900">{{ item.degree }}</h3>
               <p class="text-sm text-gray-700">
@@ -58,8 +60,7 @@ const isExpanded = (index: number) => expandedItems.value.has(index)
           <div class="flex items-center gap-2">
             <span class="text-sm text-gray-600">{{ item.date }}</span>
             <button
-              @click="toggleExpanded(index)"
-              class="w-5 h-5 flex items-center justify-center rounded text-gray-500 hover:text-gray-700 transition-colors"
+              class="w-5 h-5 flex items-center justify-center rounded text-gray-500 hover:text-gray-700 cursor-pointer transition-colors"
             >
               <svg 
                 :class="{ 'rotate-180': isExpanded(index) }"
@@ -103,11 +104,11 @@ const isExpanded = (index: number) => expandedItems.value.has(index)
     <!-- Certificates Section (after all degrees) -->
     <div v-if="education.certificates && education.certificates.details.length > 0" class="mt-2 pt-4">
       <h4 class="text-sm font-medium text-gray-800 mb-3">{{ education.certificates.title }}</h4>
-      <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap">
         <span 
           v-for="(certificate, certIndex) in education.certificates.details" 
           :key="certIndex"
-          class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded border border-gray-200"
+          class="px-3 ml-6 py-1 bg-gray-100 text-gray-700 text-sm rounded border border-gray-200"
         >
           {{ certificate }}
         </span>
