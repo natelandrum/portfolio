@@ -5,7 +5,7 @@ const summary = computed(() => t('resume.summary') as unknown as object & { poin
 </script>
 
 <template>
-  <div class="px-8 py-2">
+  <div class="px-4 sm:px-8 py-2">
     <!-- Title -->
     <h2 class="text-lg font-bold text-gray-900 mb-3">
       {{ t('resume.summary.title') }}

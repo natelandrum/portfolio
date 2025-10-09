@@ -26,7 +26,7 @@ const isExpanded = (index: number) => expandedItems.value.has(index)
 </script>
 
 <template>
-  <div class="px-8 py-2">
+  <div class="px-4 sm:px-8 py-2">
     <!-- Title -->
     <h2 class="text-lg font-bold text-gray-900 mb-4">
       {{ experience.title }}
@@ -40,28 +40,49 @@ const isExpanded = (index: number) => expandedItems.value.has(index)
         class="border-l-2 border-gray-200 pl-4"
       >
         <!-- Main Info (Always Visible) -->
-        <div class="flex justify-between items-start mb-2 rounded p-2 hover:bg-gray-100 cursor-pointer transition-colors"
+        <div class="rounded p-2 hover:bg-gray-50 cursor-pointer transition-colors"
           @click="toggleExpanded(index)"
-          >
-          <div class="flex-1">
-            <h3 class="text-sm font-semibold text-gray-900">{{ item.title }}</h3>
-            <p class="text-sm text-gray-700">{{ item.company }}</p>
+        >
+          <!-- Desktop Layout -->
+          <div class="hidden sm:flex justify-between items-start mb-2">
+            <div class="flex-1">
+              <h3 class="text-sm font-semibold text-gray-900">{{ item.title }}</h3>
+              <p class="text-sm text-gray-700">{{ item.company }}</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sm text-gray-600">{{ item.date }}</span>
+              <button class="w-5 h-5 flex items-center justify-center text-gray-500 hover:text-blue-600 transition-colors">
+                <svg 
+                  :class="{ 'rotate-180': isExpanded(index) }"
+                  class="w-4 h-4 transition-transform duration-200"
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="text-sm text-gray-600">{{ item.date }}</span>
-            <button
-              class="w-5 h-5 flex items-center justify-center text-gray-500 hover:text-gray-700 transition-colors"
-            >
-              <svg 
-                :class="{ 'rotate-180': isExpanded(index) }"
-                class="w-4 h-4 transition-transform duration-200"
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
+
+          <!-- Mobile Layout -->
+          <div class="sm:hidden mb-2">
+            <div class="flex justify-between items-start mb-1">
+              <h3 class="text-sm font-semibold text-gray-900 flex-1">{{ item.title }}</h3>
+              <button class="w-5 h-5 flex items-center justify-center text-gray-500 hover:text-blue-600 transition-colors ml-2">
+                <svg 
+                  :class="{ 'rotate-180': isExpanded(index) }"
+                  class="w-4 h-4 transition-transform duration-200"
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+            <p class="text-sm text-gray-700">{{ item.company }}</p>
+            <p class="text-sm text-gray-600 mt-1">{{ item.date }}</p>
           </div>
         </div>
         
