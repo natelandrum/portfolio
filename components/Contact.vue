@@ -215,7 +215,7 @@
             <button
               type="submit"
               :disabled="isSubmitting"
-              class="self-center px-6 py-3 w-full max-w-[300px] font-bold border-2 green transition-all duration-500 delay-[400ms]"
+              class="self-center px-6 py-3 w-full max-w-[300px] font-bold border-2 blue transition-all duration-500 delay-[400ms]"
               :class="formVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-10 opacity-0 scale-95'"
             >
               <span v-if="isSubmitting">{{ t('contact.sending') }}</span>
