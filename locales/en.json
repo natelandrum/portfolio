@@ -401,6 +401,42 @@
       "cardLink": "/about"
     }
   ],
+  "about": {
+    "title": "About Me",
+    "subtitle": "My Journey in Software Development",
+    "sections": [
+      {
+        "icon": "🚀",
+        "title": "The Beginning",
+        "content": "I discovered my passion for programming while studying Aeronautical Engineering at Instituto Politécnico Nacional in Mexico, where I first encountered the power of code in solving complex technical challenges."
+      },
+      {
+        "icon": "💡",
+        "title": "The Transformation",
+        "content": "What started as a curiosity quickly turned into a deep appreciation for building solutions that address real-world problems. Now, as I pursue a Bachelor of Applied Science in Software Development at BYU-Idaho, I focus on creating practical applications that solve everyday challenges for users."
+      },
+      {
+        "icon": "🖥️",
+        "title": "Hands-On Experience",
+        "content": "Through my academic projects and hands-on learning, I've built applications that tackle real problems: FileX for seamless file sharing, a Task Manager for productivity, a Real-Time Chat App for communication, and a containerized Sudoku Solver. I've also created tools like a Chrome extension that enhances language learning efficiency on Duolingo."
+      },
+      {
+        "icon": "🔧",
+        "title": "Technical Growth",
+        "content": "These projects have strengthened my ability to work with modern web technologies including React, Next.js, TypeScript, and cloud services. I've implemented real-time features with WebSocket connections, integrated cloud storage solutions, and deployed containerized applications. Each project taught me to write cleaner code and think about user experience."
+      },
+      {
+        "icon": "🌍",
+        "title": "Looking Forward",
+        "content": "I'm excited to continue growing as a full-stack developer, refining my skills in scalable web applications and problem-solving. I'm open to opportunities in software development, including front-end, back-end, and full-stack positions where I can contribute to impactful projects while learning from experienced professionals."
+      },
+      {
+        "icon": "🤝",
+        "title": "Let's Connect",
+        "content": "I'd love to connect with others who share a passion for technology, innovation, and continuous learning—let's build something great together!"
+      }
+    ]
+  },
   "footer": {
     "rights": "All rights reserved",
     "quickLinks": "Quick Links",

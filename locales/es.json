@@ -389,6 +389,42 @@
       "cardLink": "/about"
     }
   ],
+  "about": {
+    "title": "Acerca de Mí",
+    "subtitle": "Mi Viaje en el Desarrollo de Software",
+    "sections": [
+      {
+        "icon": "🚀",
+        "title": "El Comienzo",
+        "content": "Descubrí mi pasión por la programación mientras estudiaba Ingeniería Aeronáutica en el Instituto Politécnico Nacional en México, donde encontré por primera vez el poder del código para resolver desafíos técnicos complejos."
+      },
+      {
+        "icon": "💡",
+        "title": "La Transformación",
+        "content": "Lo que comenzó como curiosidad se convirtió rápidamente en una profunda apreciación por construir soluciones que abordan problemas del mundo real. Ahora, mientras estudio una Licenciatura en Ciencias Aplicadas en Desarrollo de Software en BYU-Idaho, me enfoco en crear aplicaciones prácticas que resuelven desafíos cotidianos para los usuarios."
+      },
+      {
+        "icon": "🖥️",
+        "title": "Experiencia Práctica",
+        "content": "A través de mis proyectos académicos y aprendizaje práctico, he construido aplicaciones que abordan problemas reales: FileX para compartir archivos sin problemas, un Administrador de Tareas para productividad, una App de Chat en Tiempo Real para comunicación, y un Solucionador de Sudoku containerizado. También he creado herramientas como una extensión de Chrome que mejora la eficiencia del aprendizaje de idiomas en Duolingo."
+      },
+      {
+        "icon": "🔧",
+        "title": "Crecimiento Técnico",
+        "content": "Estos proyectos han fortalecido mi capacidad para trabajar con tecnologías web modernas incluyendo React, Next.js, TypeScript y servicios en la nube. He implementado características en tiempo real con conexiones WebSocket, integrado soluciones de almacenamiento en la nube, y desplegado aplicaciones containerizadas. Cada proyecto me enseñó a escribir código más limpio y pensar en la experiencia del usuario."
+      },
+      {
+        "icon": "🌍",
+        "title": "Mirando Hacia Adelante",
+        "content": "Estoy emocionado de seguir creciendo como desarrollador full-stack, perfeccionando mis habilidades en aplicaciones web escalables y resolución de problemas. Estoy abierto a oportunidades en desarrollo de software, incluyendo posiciones frontend, backend y full-stack donde pueda contribuir a proyectos impactantes mientras aprendo de profesionales experimentados."
+      },
+      {
+        "icon": "🤝",
+        "title": "Conectemos",
+        "content": "Me encantaría conectar con otros que comparten una pasión por la tecnología, la innovación y el aprendizaje continuo—¡construyamos algo grandioso juntos!"
+      }
+    ]
+  },
   "footer": {
     "rights": "Todos los derechos reservados",
     "quickLinks": "Enlaces Rápidos",
