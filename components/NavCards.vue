@@ -13,6 +13,10 @@
   }
 
   const navCards = computed(() => t('navCards') as unknown as NavCard[])
+  
+  // Animation states
+  const visibleCards = ref<number[]>([])
+  const animationDelay = 200
 
   function getIconComponent(linkText: string) {
     switch (linkText) {
@@ -26,6 +30,50 @@
         return null
     }
   }
+
+  onMounted(() => {
+    // Set up Intersection Observer for nav cards
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -10% 0px',
+      threshold: 0.1
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      const newlyVisibleCards: number[] = []
+
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const cardIndex = Number(entry.target.getAttribute('data-card-index'))
+          
+          if (!visibleCards.value.includes(cardIndex)) {
+            newlyVisibleCards.push(cardIndex)
+          }
+          
+          observer.unobserve(entry.target)
+        }
+      })
+
+      if (newlyVisibleCards.length > 0) {
+        // Sort by index to animate in order
+        newlyVisibleCards.sort((a, b) => a - b)
+        
+        newlyVisibleCards.forEach((cardIndex, arrayIndex) => {
+          setTimeout(() => {
+            visibleCards.value.push(cardIndex)
+          }, arrayIndex * animationDelay)
+        })
+      }
+    }, observerOptions)
+
+    // Observe all nav cards
+    nextTick(() => {
+      const cardElements = document.querySelectorAll('[data-card-index]')
+      cardElements.forEach(element => {
+        observer.observe(element)
+      })
+    })
+  })
 </script>
 
 <template>
@@ -36,7 +84,12 @@
         v-for="(card, index) in navCards" 
         :key="index"
         :to="card.cardLink" 
-        class="p-6 border hover:scale-105 hover:cursor-pointer min-w-80 max-w-[80%] border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 block no-underline"
+        :data-card-index="index"
+        class="p-6 border hover:scale-105 hover:cursor-pointer min-w-80 max-w-[80%] border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 block no-underline opacity-0 transform translate-y-8"
+        :class="{ 
+          'opacity-100 translate-y-0': visibleCards.includes(index),
+          'transition-all duration-700 ease-out': visibleCards.includes(index)
+        }"
       >
         <!-- SVG Placeholder -->
         <div class="mb-4 flex justify-center">
