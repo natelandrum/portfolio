@@ -25,8 +25,8 @@
 
 <template>
   <div>
-    <Hero />
+    <HomeHero />
     <hr class="border-t border-gray-200">
-    <NavCards />
+    <HomeNavCards />
   </div>
 </template>

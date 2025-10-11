@@ -6,6 +6,6 @@
       <main>
         <NuxtPage />
       </main>
-      <Footer />
+      <NavFooter />
     </div>
 </template>
