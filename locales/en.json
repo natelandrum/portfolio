@@ -61,9 +61,9 @@
     },
     "featuredProjects": [
       {"id": 4},
+      {"id": 7},
       {"id": 5},
-      {"id": 6},
-      {"id": 7}
+      {"id": 6}
     ],
     "list": [
       {
@@ -205,46 +205,51 @@
       "demoLink": "https://chat.nlandrum.dev/"
       },
       {
-      "id": 4,
-      "title": "Sudoku Solver",
-      "description": "A full-featured Sudoku web application built with Erlang, React, and Next.js, deployed on Railway with Docker for scalability. The app offers both puzzle solving and interactive gameplay with smart input validation and error checking. Features include multi-difficulty puzzle generation, real-time duplicate detection, and an intuitive interface that supports keyboard navigation and automatic cell advancement.",
-      "features": [
-        {
-        "title": "Smart Sudoku Input",
-        "description": "Paste a full puzzle (81 numbers with 0 for blanks) to instantly populate the board. As you type, cells auto-advance, highlight duplicates in rows/columns, and support intuitive keyboard navigation (arrow keys, backspace erase)."
-        },
-        {
-        "title": "Sudoku Solver Engine",
-        "description": "Backend written in Erlang using a recursive backtracking algorithm to validate and solve any puzzle."
-        },
-        {
-        "title": "Play Mode",
-        "description": "Generate puzzles across five difficulty levels (Easy → Evil). Error checking highlights invalid moves, prevents overwriting correct numbers, and tracks your mistakes until victory."
-        },
-        {
-        "title": "Responsive Web UI",
-        "description": "Built with React, Next.js, Tailwind CSS, and TypeScript for smooth, modern interactions across devices."
-        },
-        {
-        "title": "Containerized & Deployed",
-        "description": "Backend and frontend packaged with Docker and deployed on Railway for easy scalability and hosting."
-        }
-      ],
-      "status": "active",
-      "type": "web",
-      "platform": "railway",
-      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744572725/sudoku-solver_p1ektk.png",
-      "galleryImages": [],
-      "technologies": [
-        "Erlang",
-        "Next.js",
-        "React",
-        "Typescript",
-        "Tailwind CSS",
-        "Docker"
-      ],
-      "githubLink": "https://github.com/natelandrum/sudoku_solver",
-      "demoLink": "https://sudoku-solver.nlandrum.dev/"
+        "id": 4,
+        "title": "Sudoku Solver",
+        "description": "A full-featured Sudoku web application built with Erlang, React, and Next.js, deployed on Railway with Docker for scalability. The app offers both puzzle solving and interactive gameplay with smart input validation and error checking. Features include multi-difficulty puzzle generation, real-time duplicate detection, and an intuitive interface that supports keyboard navigation and automatic cell advancement.",
+        "features": [
+          {
+            "title": "Smart Sudoku Input",
+            "description": "Paste a full puzzle (81 numbers with 0 for blanks) to instantly populate the board. As you type, cells auto-advance, highlight duplicates in rows/columns, and support intuitive keyboard navigation (arrow keys, backspace erase)."
+          },
+          {
+            "title": "Sudoku Solver Engine",
+            "description": "Backend written in Erlang using a recursive backtracking algorithm to validate and solve any puzzle."
+          },
+          {
+            "title": "Play Mode",
+            "description": "Generate puzzles across five difficulty levels (Easy → Evil). Error checking highlights invalid moves, prevents overwriting correct numbers, and tracks your mistakes until victory."
+          },
+          {
+            "title": "Responsive Web UI",
+            "description": "Built with React, Next.js, Tailwind CSS, and TypeScript for smooth, modern interactions across devices."
+          },
+          {
+            "title": "Containerized & Deployed",
+            "description": "Backend and frontend packaged with Docker and deployed on Railway for easy scalability and hosting."
+          }
+        ],
+        "status": "active",
+        "type": "web",
+        "platform": "railway",
+        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760139197/Screenshot_2025-10-10_170512_vl71i4.png",
+        "galleryImages": [
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760138800/Screenshot_2025-10-10_170435_gorvrl.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760138917/Screenshot_2025-10-10_170457_qwtrcf.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760141190/play_csmfi9.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760141190/play1_bgs5qz.png"
+        ],
+        "technologies": [
+          "Erlang",
+          "Next.js",
+          "React",
+          "Typescript",
+          "Tailwind CSS",
+          "Docker"
+        ],
+        "githubLink": "https://github.com/natelandrum/sudoku_solver",
+        "demoLink": "https://sudoku-solver.nlandrum.dev/"
       },
       {
       "id": 5,
@@ -314,30 +319,40 @@
       {
       "id": 7,
       "title": "QR Code Generator",
-      "description": "A versatile QR code generation tool built with vanilla JavaScript, HTML, and CSS. Creates customizable QR codes for multiple content types including URLs, text, WiFi credentials, and contact information with instant preview and download capabilities.",
+      "description": "A sophisticated QR code generation tool built with vanilla JavaScript, HTML, and CSS. Generate highly customizable QR codes for Wi-Fi networks, URLs, text content, and contact information with advanced styling options, real-time preview, and mobile-optimized interface.",
       "features": [
         {
-        "title": "Multi-Format Support",
-        "description": "Generate QR codes for various content types including web URLs, plain text, WiFi network credentials, and vCard contact information. Automatic format detection and validation ensure proper QR code generation."
+        "title": "Multiple Content Types",
+        "description": "Support for Wi-Fi credentials (SSID, password, encryption types including WEP/WPA/WPA2/WPA3, hidden networks), direct URL links, plain text content, and vCard contact information with automatic format validation."
         },
         {
-        "title": "Visual Customization",
-        "description": "Customize QR code appearance with foreground and background color selection using an intuitive color picker interface. Generate updated QR codes with your chosen colors while maintaining scanability standards."
+        "title": "Comprehensive Styling Control",
+        "description": "Choose from 6 distinct dot patterns including Square, Rounded, Dots, Classy, and Extra Rounded styles. Apply single colors or gradients to dots, corner squares, corner dots, and backgrounds with independent corner style customization."
         },
         {
-        "title": "Instant Generation",
-        "description": "Client-side QR code generation with immediate preview after clicking the generate button. No server requests required - all processing happens locally in the browser using JavaScript for maximum speed and privacy."
+        "title": "Custom Logo Integration",
+        "description": "Embed custom logos with adjustable sizing (10%-50%) and configurable margins (0-50px). Smart background dot hiding and automatic error correction optimization ensure perfect logo integration without compromising scanability."
         },
         {
-        "title": "High-Quality Export",
-        "description": "Download generated QR codes as high-resolution PNG images suitable for printing or digital use."
+        "title": "Seamless User Experience",
+        "description": "Real-time QR code generation with instant preview updates. Mobile-responsive design with touch-friendly sliding preview panel for optimal mobile experience. One-click PNG export with descriptive filenames."
+        },
+        {
+        "title": "Robust Technical Foundation",
+        "description": "Built on qr-code-styling library v1.6.0 with adaptive error correction levels (Medium for standard codes, High for logo-embedded codes). Fully client-side processing ensures privacy and speed with cross-platform browser compatibility."
         }
       ],
       "status": "active",
       "type": "web",
       "platform": "githubPages",
-      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1759121429/Screenshot_2025-09-28_224313_jvkbjk.png",
-      "galleryImages": [],
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760145147/1_cfvm6v.png",
+      "galleryImages": [
+        "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760145148/2_h6eexa.png",
+        "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760145148/3_tyfjo2.png",
+        "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760145149/4_z1zjvp.png",
+        "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760145150/5_murvau.png",
+        "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760145150/6_qmdzfz.png"
+      ],
       "technologies": ["HTML", "CSS", "JavaScript"],
       "githubLink": "https://github.com/natelandrum/qr-code-generator",
       "demoLink": "https://qr-generator.nlandrum.dev/"

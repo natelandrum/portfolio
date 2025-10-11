@@ -58,7 +58,12 @@
       "chromeWebStore": "Chrome Web Store",
       "other": "Otro"
     },
-    "featuredProjects": [{ "id": 4 }, { "id": 5 }, { "id": 6 }, { "id": 7 }],
+    "featuredProjects": [
+      { "id": 4 }, 
+      { "id": 7 },
+      { "id": 5 }, 
+      { "id": 6 }
+    ],
     "list": [
       {
       "id": 1,
@@ -224,7 +229,13 @@
       "status": "active",
       "type": "web",
       "platform": "railway",
-      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1744572725/sudoku-solver_p1ektk.png",
+      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760139197/Screenshot_2025-10-10_170512_vl71i4.png",
+      "galleryImages": [
+        "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760138800/Screenshot_2025-10-10_170435_gorvrl.png",
+        "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760138917/Screenshot_2025-10-10_170457_qwtrcf.png",
+        "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760141190/play_csmfi9.png",
+        "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760141190/play1_bgs5qz.png"
+      ],
       "technologies": [
         "Erlang",
         "Next.js",
@@ -300,34 +311,45 @@
       "demoLink": "https://flashcards.nlandrum.dev/"
       },
       {
-      "id": 7,
-      "title": "QR Code Generator",
-      "description": "Una herramienta versátil de generación de códigos QR construida con JavaScript vanilla, HTML y CSS. Crea códigos QR personalizables para múltiples tipos de contenido incluyendo URLs, texto, credenciales WiFi e información de contacto con vista previa instantánea y capacidades de descarga.",
-      "features": [
-        {
-        "title": "Soporte Multi-Formato",
-        "description": "Genera códigos QR para varios tipos de contenido incluyendo URLs web, texto plano, credenciales de red WiFi e información de contacto vCard. Detección automática de formato y validación aseguran generación adecuada de códigos QR."
-        },
-        {
-        "title": "Personalización Visual",
-        "description": "Personaliza apariencia de códigos QR con selección de colores de primer plano y fondo usando una interfaz intuitiva de selector de color. Genera códigos QR actualizados con tus colores elegidos mientras mantienes estándares de escaneabilidad."
-        },
-        {
-        "title": "Generación Instantánea",
-        "description": "Generación de códigos QR del lado del cliente con vista previa inmediata después de hacer clic en el botón generar. No se requieren solicitudes de servidor - todo el procesamiento ocurre localmente en el navegador usando JavaScript para máxima velocidad y privacidad."
-        },
-        {
-        "title": "Exportación de Alta Calidad",
-        "description": "Descarga códigos QR generados como imágenes PNG de alta resolución adecuadas para impresión o uso digital."
-        }
-      ],
-      "status": "active",
-      "type": "web",
-      "platform": "githubPages",
-      "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1759121429/Screenshot_2025-09-28_224313_jvkbjk.png",
-      "technologies": ["HTML", "CSS", "JavaScript"],
-      "githubLink": "https://github.com/natelandrum/qr-code-generator",
-      "demoLink": "https://qr-generator.nlandrum.dev/"
+        "id": 7,
+        "title": "Generador de Códigos QR",
+        "description": "Una herramienta sofisticada de generación de códigos QR construida con JavaScript vanilla, HTML y CSS. Genera códigos QR altamente personalizables para redes Wi-Fi, URLs, contenido de texto e información de contacto con opciones avanzadas de estilo, vista previa en tiempo real e interfaz optimizada para móviles.",
+        "features": [
+          {
+            "title": "Múltiples Tipos de Contenido",
+            "description": "Soporte para credenciales Wi-Fi (SSID, contraseña, tipos de encriptación incluyendo WEP/WPA/WPA2/WPA3, redes ocultas), enlaces URL directos, contenido de texto plano e información de contacto vCard con validación automática de formato."
+          },
+          {
+            "title": "Control Integral de Estilo",
+            "description": "Elige entre 6 patrones distintos de puntos incluyendo estilos Cuadrado, Redondeado, Puntos, Elegante y Extra Redondeado. Aplica colores únicos o degradados a puntos, esquinas cuadradas, puntos de esquina y fondos con personalización independiente de estilos de esquina."
+          },
+          {
+            "title": "Integración Personalizada de Logotipos",
+            "description": "Incrusta logotipos personalizados con dimensionamiento ajustable (10%-50%) y márgenes configurables (0-50px). Ocultación inteligente de puntos de fondo y optimización automática de corrección de errores aseguran integración perfecta sin comprometer la capacidad de escaneo."
+          },
+          {
+            "title": "Experiencia de Usuario Fluida",
+            "description": "Generación de códigos QR en tiempo real con actualizaciones instantáneas de vista previa. Diseño responsivo para móviles con panel deslizante de vista previa amigable al tacto para experiencia móvil óptima. Exportación PNG con un clic y nombres de archivo descriptivos."
+          },
+          {
+            "title": "Base Técnica Robusta",
+            "description": "Construido sobre la librería qr-code-styling v1.6.0 con niveles adaptativos de corrección de errores (Medio para códigos estándar, Alto para códigos con logotipos). Procesamiento completamente del lado del cliente asegura privacidad y velocidad con compatibilidad multiplataforma de navegadores."
+          }
+        ],
+        "status": "active",
+        "type": "web",
+        "platform": "githubPages",
+        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760145147/1_cfvm6v.png",
+        "galleryImages": [
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760145148/2_h6eexa.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760145148/3_tyfjo2.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760145149/4_z1zjvp.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760145150/5_murvau.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1760145150/6_qmdzfz.png"
+        ],
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "githubLink": "https://github.com/natelandrum/qr-code-generator",
+        "demoLink": "https://qr-generator.nlandrum.dev/"
       }
     ]
   },
