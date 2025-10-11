@@ -77,30 +77,42 @@
 </script>
 
 <template>
-  <section class="container my-12">
-    <div class="max-w-[90%] justify-items-center mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+  <section class="container mx-auto px-4 sm:px-6 lg:px-8 my-8 sm:my-12 lg:my-16">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
       <!-- Navigation Card -->
       <router-link 
         v-for="(card, index) in navCards" 
         :key="index"
         :to="card.cardLink" 
         :data-card-index="index"
-        class="p-6 border hover:scale-105 hover:cursor-pointer min-w-80 max-w-[80%] border-gray-200 rounded-xl hover:shadow-lg transition-all duration-300 block no-underline opacity-0 transform translate-y-8"
+        class="group relative my-3 p-4 sm:p-6 lg:p-8 border border-gray-200 rounded-xl bg-transparent hover:border-gray-300 hover:translate-y-0 active:scale-95 transition-all duration-300 ease-out no-underline opacity-0 transform translate-y-8 w-full min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] flex flex-col items-center justify-center text-center backdrop-blur-sm"
         :class="{ 
           'opacity-100 translate-y-0': visibleCards.includes(index),
           'transition-all duration-700 ease-out': visibleCards.includes(index)
         }"
       >
-        <!-- SVG Placeholder -->
-        <div class="mb-4 flex justify-center">
-            <component :is="getIconComponent(card.cardLink)" class="w-16 h-16 text-gray-400" />
+        
+        <!-- SVG Icon -->
+        <div class="relative z-10 mb-3 sm:mb-4 lg:mb-6 flex justify-center transform group-hover:scale-110 transition-transform duration-300">
+          <component :is="getIconComponent(card.cardLink)" class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 text-gray-400 group-hover:text-blue-500 transition-colors duration-300" />
         </div>
         
         <!-- Card Title -->
-        <h2 class="text-2xl font-bold mb-4 text-center">{{ card.cardTitle }}</h2>
+        <h2 class="relative z-10 text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 lg:mb-4 text-white leading-tight">
+          {{ card.cardTitle }}
+        </h2>
         
         <!-- Card Description -->
-        <p class="text-gray-400 text-center mb-4">{{ card.cardDescription }}</p>
+        <p class="relative z-10 text-sm sm:text-base lg:text-lg text-gray-500 leading-relaxed max-w-xs sm:max-w-sm lg:max-w-md">
+          {{ card.cardDescription }}
+        </p>
+        
+        <!-- Subtle arrow indicator -->
+        <div class="relative z-10 mt-3 sm:mt-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
       </router-link>
     </div>
   </section>

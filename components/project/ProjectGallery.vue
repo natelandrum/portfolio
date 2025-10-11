@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 const { t } = useTranslation()
 
 type Props = {
@@ -81,7 +82,7 @@ const scrollDown = () => {
 
 const openModal = (index: number) => {
   if (images.value.length > 0) {
-    modalCurrentIndex.value = currentVisibleStart.value + index
+    modalCurrentIndex.value = index
     isModalOpen.value = true
   }
 }
@@ -96,8 +97,8 @@ const updateModalIndex = (index: number) => {
 </script>
 
 <template>
-  <div class="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-    <div class="mb-4">
+  <div class="bg-gradient-to-br flex flex-col items-center from-gray-800/60 to-gray-900/60 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+    <div class="mb-4 self-start">
       <h3 class="text-xl font-bold text-white flex items-center">
         <svg class="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -125,10 +126,10 @@ const updateModalIndex = (index: number) => {
     </div>
 
     <!-- Carousel Container with Overflow Hidden -->
-    <div class="relative overflow-hidden" style="height: 332px;">
+    <div class="relative overflow-hidden w-[18rem] sm:w-sm md:w-md lg:w-auto h-[332px]">
       <div 
         class="transition-transform duration-500 ease-in-out flex flex-col gap-3"
-        :style="{ transform: `translateY(-${currentVisibleStart * 166}px)` }"
+        :style="{ transform: `translateY(-${currentVisibleStart * 172}px)` }"
       >
         <!-- Show all images in a scrollable container -->
         <template v-if="images.length === 0">
@@ -136,8 +137,7 @@ const updateModalIndex = (index: number) => {
           <div
             v-for="(placeholder, index) in placeholderImages"
             :key="`placeholder-${index}`"
-            class="rounded-lg overflow-hidden bg-gray-700/50 aspect-video flex items-center justify-center transition-all duration-300 flex-shrink-0"
-            style="height: 160px;"
+            class="rounded-lg h-[160px] overflow-hidden bg-gray-700/50 aspect-video flex items-center justify-center transition-all duration-300 flex-shrink-0"
           >
             <div class="text-center">
               <span class="text-gray-400 text-sm">{{ placeholder.label }}</span>
@@ -148,8 +148,7 @@ const updateModalIndex = (index: number) => {
         <template v-else-if="images.length === 1">
           <!-- One image + coming soon -->
           <div
-            class="rounded-lg overflow-hidden bg-gray-700/50 aspect-video flex items-center justify-center transition-all duration-300 flex-shrink-0 hover:scale-105 cursor-pointer group"
-            style="height: 160px;"
+            class="rounded-lg h-[160px] overflow-hidden bg-gray-700/50 aspect-video flex items-center justify-center transition-all duration-300 flex-shrink-0 hover:scale-105 cursor-pointer group"
             @click="openModal(0)"
           >
             <img
@@ -159,8 +158,7 @@ const updateModalIndex = (index: number) => {
             />
           </div>
           <div
-            class="rounded-lg overflow-hidden bg-gray-700/50 aspect-video flex items-center justify-center transition-all duration-300 flex-shrink-0"
-            style="height: 160px;"
+            class="rounded-lg h-[160px] overflow-hidden bg-gray-700/50 aspect-video flex items-center justify-center transition-all duration-300 flex-shrink-0"
           >
             <div class="text-center">
               <span class="text-gray-400 text-sm">Coming Soon</span>
@@ -176,8 +174,7 @@ const updateModalIndex = (index: number) => {
           <div
             v-for="(image, index) in images"
             :key="`image-${index}`"
-            class="rounded-lg overflow-hidden bg-gray-700/50 aspect-video flex items-center justify-center transition-all duration-300 flex-shrink-0 hover:scale-105 cursor-pointer group"
-            style="height: 160px;"
+            class="rounded-lg h-[160px] overflow-hidden bg-gray-700/50 aspect-video flex items-center justify-center transition-all duration-300 flex-shrink-0 hover:scale-105 cursor-pointer group"
             @click="openModal(index)"
           >
             <img
@@ -219,7 +216,3 @@ const updateModalIndex = (index: number) => {
     />
   </div>
 </template>
-
-<style scoped>
-/* Carousel container styling - smooth scrolling handled by transform transition in template */
-</style>

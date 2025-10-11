@@ -28,9 +28,9 @@
   })
 
   const featuredProjects = computed(() => {
-    return allProjects.value.filter(project => 
-      featuredProjectIds.value.some(featured => featured.id === project.id)
-    )
+    return featuredProjectIds.value
+      .map(featured => allProjects.value.find(project => project.id === featured.id))
+      .filter(project => project !== undefined) as Project[]
   })
 
   const otherProjects = computed(() => {

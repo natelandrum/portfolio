@@ -54,7 +54,7 @@
   // Swipe gesture handlers
   const handleTouchStart = (event: TouchEvent) => {
     // Only detect touches on mobile screens
-    if (window.innerWidth >= 768) return
+    if (window.innerWidth >= 1024) return
     
     const touch = event.touches[0]
     const screenWidth = window.innerWidth
@@ -175,7 +175,7 @@
        </router-link>
 
       <!-- Desktop Menu -->
-      <div class="hidden md:flex items-center">
+      <div class="hidden lg:flex items-center">
         <router-link to="/">
           <div
             class="px-3 py-2 blue flex border-0!"
@@ -213,7 +213,7 @@
           </div>
         </router-link>
 
-        <LanguageToggle />
+        <NavLanguageToggle />
       </div>
 
       <!-- Mobile Menu Button (only show when menu is closed) -->
@@ -221,7 +221,7 @@
         v-show="!isMenuOpen"
         ref="mobileMenuButton"
         @click="toggleMenu"
-        class="md:hidden cursor-pointer text-light focus:outline-none relative z-[60] transition-all duration-300 ease-in-out"
+        class="lg:hidden cursor-pointer text-light focus:outline-none relative z-[60] transition-all duration-300 ease-in-out"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -244,7 +244,7 @@
     <!-- Mobile Sidebar -->
     <div
       ref="mobileSidebar"
-      class="mobile-sidebar fixed top-0 right-0 bg-black h-[100vh] w-64 shadow-lg z-[50] md:hidden transform transition-transform duration-300 ease-in-out"
+      class="mobile-sidebar fixed top-0 right-0 bg-black h-[100vh] w-64 shadow-lg z-[50] lg:hidden transform transition-transform duration-300 ease-in-out"
       :class="isMenuOpen ? 'translate-x-0' : 'translate-x-full'"
     >
       <!-- Close button inside menu -->
@@ -272,7 +272,7 @@
       </div>
       
       <div class="flex flex-col pt-4 px-6 mb-4">
-        <LanguageToggle />
+        <NavLanguageToggle />
         <router-link to="/" @click="isMenuOpen = false">
           <div
             class="px-3 py-3 mt-4 flex rounded-lg blue border-0!"
