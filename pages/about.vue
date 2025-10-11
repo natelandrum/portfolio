@@ -164,5 +164,5 @@ onMounted(() => {
   <hr class="border-t border-gray-200">
   
   <!-- Contact Section -->
-  <Contact />
+  <AboutContact />
 </template>
