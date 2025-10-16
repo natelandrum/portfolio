@@ -128,7 +128,7 @@
 
   // Watch for menu changes to handle body scroll
   watch(isMenuOpen, (newValue) => {
-    if (process.client) {
+    if (import.meta.client) {
       if (newValue) {
         // Prevent body scroll when menu is open
         const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth
@@ -165,7 +165,7 @@
 
 <template>
   <nav id="nav" class="px-6 py-4 w-full max-w-[90%] rounded-xl border border-gray-200 mt-4 z-10">
-    <div class="container flex items-center justify-between mx-auto">
+    <div class="flex items-center justify-between w-full">
       <!-- Logo -->
        <router-link to="/">
          <div class="flex items-center cursor-pointer">
@@ -216,28 +216,30 @@
         <NavLanguageToggle />
       </div>
 
-      <!-- Mobile Menu Button (only show when menu is closed) -->
+      <!-- Mobile Menu Button -->
       <button
-        v-show="!isMenuOpen"
         ref="mobileMenuButton"
         @click="toggleMenu"
-        class="lg:hidden cursor-pointer text-light focus:outline-none relative z-[60] transition-all duration-300 ease-in-out"
+        class="lg:hidden cursor-pointer focus:outline-none transition-all duration-300 ease-in-out"
+        :class="isMenuOpen ? 'z-[60] text-white' : 'relative z-[60] text-light'"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-6 h-6 transition-all duration-300 ease-in-out"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-            class="transition-all duration-300 ease-in-out"
-          />
-        </svg>
+        <div class="w-6 h-6 flex flex-col justify-center items-center">
+          <!-- Top line -->
+          <span
+            class="block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out"
+            :class="isMenuOpen ? 'rotate-45 translate-y-0.5' : 'rotate-0 translate-y-0 mb-1'"
+          ></span>
+          <!-- Middle line -->
+          <span
+            class="block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out"
+            :class="isMenuOpen ? 'opacity-0' : 'opacity-100 mb-1'"
+          ></span>
+          <!-- Bottom line -->
+          <span
+            class="block w-6 h-0.5 bg-current transition-all duration-300 ease-in-out"
+            :class="isMenuOpen ? '-rotate-45 -translate-y-0.5' : 'rotate-0 translate-y-0'"
+          ></span>
+        </div>
       </button>
     </div>
 
@@ -247,29 +249,8 @@
       class="mobile-sidebar fixed top-0 right-0 bg-black h-[100vh] w-64 shadow-lg z-[50] lg:hidden transform transition-transform duration-300 ease-in-out"
       :class="isMenuOpen ? 'translate-x-0' : 'translate-x-full'"
     >
-      <!-- Close button inside menu -->
-      <div class="flex justify-end mr-[10%] mt-[2rem] p-4">
-        <button
-          @click="toggleMenu"
-          class="cursor-pointer text-white focus:outline-none transition-all duration-300 ease-in-out hover:text-gray-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6 transition-all duration-300 ease-in-out"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-              class="transition-all duration-300 ease-in-out"
-            />
-          </svg>
-        </button>
-      </div>
+      <!-- Menu content with top spacing for button -->
+      <div class="pt-16"></div>
       
       <div class="flex flex-col pt-4 px-6 mb-4">
         <NavLanguageToggle />
