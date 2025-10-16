@@ -77,7 +77,7 @@
 </script>
 
 <template>
-  <section class="container mx-auto px-4">
+  <section class="container max-w-[90%] mx-auto px-4">
     <div class="mx-auto align-items-center justify-items-center grid grid-cols-1 lg:grid-cols-3 gap-4">
       <!-- Navigation Card -->
       <router-link 

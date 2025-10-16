@@ -42,7 +42,7 @@
       >
         <UiGradientBackground />
         <img
-      src="assets/profile.jpg"
+      src="https://res.cloudinary.com/dhqwefv7s/image/upload/v1760641309/profile_lapct1.jpg"
       :alt="`${t('contact.myName')} Profile`"
       class="mt-4 min-w-auto min-h-[300px] max-w-auto max-h-[300px] brightness-100"
         />
