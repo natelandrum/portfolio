@@ -161,8 +161,7 @@ onMounted(() => {
   </div>
   
   <!-- Full-width HR -->
-  <hr class="border-t border-gray-200">
-  
+  <UiFullWidthDivider />  
   <!-- Contact Section -->
   <AboutContact />
 </template>

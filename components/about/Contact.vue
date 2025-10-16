@@ -113,7 +113,7 @@
           <div class="space-y-4">
             <div class="flex items-start">
               <div class="absolute w-80 h-50 -z-10">
-                <GradientBackground />
+                <UiGradientBackground />
               </div>
               <div class="flex items-center py-2 hover:scale-110 transition-transform">
                 <EmailIcon class="mr-3 w-6 h-6 flex-shrink-0" />

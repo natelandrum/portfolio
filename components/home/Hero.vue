@@ -21,7 +21,7 @@
 </script>
 
 <template>
-  <section class="relative flex justify-center mt-12">
+  <section class="mx-auto relative flex justify-center mt-12">
     <div class="container max-w-[90%] mb-8 flex flex-col md:flex-row md:items-center">
       <div 
         class="inner-container md:w-1/2 transform transition-all duration-1000 ease-out"
@@ -40,11 +40,11 @@
         class="md:w-1/2 flex relative text-gray-500 text-wrap font-bold justify-center transform transition-all duration-1000 ease-out"
         :class="imageVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
       >
-        <GradientBackground />
+        <UiGradientBackground />
         <img
-      src="https://res.cloudinary.com/dhqwefv7s/image/upload/c_crop,ar_1:1/v1759211591/IMG_0098_vuwcjn.jpg"
+      src="assets/profile.jpg"
       :alt="`${t('contact.myName')} Profile`"
-      class="min-w-auto min-h-[300px] max-w-auto max-h-[300px] brightness-75"
+      class="mt-4 min-w-auto min-h-[300px] max-w-auto max-h-[300px] brightness-100"
         />
       </div>
     </div>

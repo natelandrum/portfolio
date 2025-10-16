@@ -1,7 +1,7 @@
 <script setup lang="ts">
   const { t } = useTranslation()
   useHead({
-    title: t('contact.myName') + ' | ' + t('home.title'),
+    title: t('contact.myName') + ' - ' + t('home.title'),
     meta: [
       {
         name: 'description',
@@ -13,7 +13,7 @@
       },
       {
         property: 'og:title',
-        content: t('contact.myName') + ' | ' + t('home.title'),
+        content: t('contact.myName') + ' - ' + t('home.title'),
       },
       {
         property: 'og:description',
@@ -24,9 +24,9 @@
 </script>
 
 <template>
-  <div>
+  <div class="flex flex-col w-full">
     <HomeHero />
-    <hr class="border-t border-gray-200">
+    <UiFullWidthDivider />
     <HomeNavCards />
   </div>
 </template>

@@ -9,7 +9,6 @@
     technologies: string[]
     githubLink?: string
     demoLink?: string
-    touchIconClass?: "dark" | "light"
   }
 
   const showAllProjects = ref(false)
