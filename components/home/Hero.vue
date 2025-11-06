@@ -42,9 +42,9 @@
       >
         <UiGradientBackground />
         <img
-      src="https://res.cloudinary.com/dhqwefv7s/image/upload/v1760641309/profile_lapct1.jpg"
+      src="https://res.cloudinary.com/dhqwefv7s/image/upload/v1762405227/Untitled_grgcem.png"
       :alt="`${t('contact.myName')} Profile`"
-      class="mt-4 min-w-auto min-h-[300px] max-w-auto max-h-[300px] brightness-100"
+      class="mt-4 rounded-full min-w-auto min-h-[300px] max-w-auto max-h-[300px] brightness-90"
         />
       </div>
     </div>
