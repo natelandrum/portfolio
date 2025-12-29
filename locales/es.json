@@ -56,11 +56,13 @@
       "azure": "Azure",
       "render": "Render",
       "chromeWebStore": "Chrome Web Store",
+      "electron": "Electron",
       "other": "Otro"
     },
     "featuredProjects": [
-      { "id": 4 }, 
+      { "id": 8 }, 
       { "id": 7 },
+      { "id": 4 }, 
       { "id": 5 }, 
       { "id": 6 }
     ],
@@ -350,6 +352,61 @@
         "technologies": ["HTML", "CSS", "JavaScript"],
         "githubLink": "https://github.com/natelandrum/qr-code-generator",
         "demoLink": "https://qr-generator.nlandrum.dev/"
+      },
+      {
+        "id": 8,
+        "title": "Control Remoto ECP para Roku",
+        "description": "Un control remoto de escritorio profesional para dispositivos Roku, utilizando Electron y la API ECP de Roku para una operación fluida y responsiva. El descubrimiento de dispositivos es automático mediante SSDP con búsqueda por IP como respaldo, asegurando conectividad confiable y una experiencia de usuario sin esfuerzo.",
+        "features": [
+          {
+        "title": "Soporte de idioma inglés y español",
+        "description": "Cambia entre interfaces en inglés y español para mayor accesibilidad."
+          },
+          {
+        "title": "Interfaz intuitiva y accesible",
+        "description": "Diseñada para facilidad de uso con controles claros y navegación por teclado."
+          },
+          {
+        "title": "Selector de aplicaciones y entradas",
+        "description": "Selecciona rápidamente aplicaciones de Roku y fuentes de entrada disponibles directamente desde el control remoto."
+          },
+          {
+        "title": "Controles de volumen y encendido",
+        "description": "Controla el volumen y encendido del televisor (cuando es compatible) directamente desde la aplicación."
+          },
+          {
+        "title": "Accesos directos de aplicaciones personalizables y temas",
+        "description": "Personaliza tu experiencia con accesos directos de aplicaciones y opciones de temas."
+          },
+          {
+        "title": "Atajos de teclado y entrada avanzada",
+        "description": "Utiliza prácticos atajos de teclado para realizar acciones del control remoto eficientemente y envía texto alfanumérico directamente a tu dispositivo Roku para entrada de texto sin esfuerzo."
+          }
+        ],
+        "status": "active",
+        "type": "desktop",
+        "platform": "electron",
+        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049632/Screenshot_2025-12-29_170555_fcgzgx.png",
+        "galleryImages": [
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049632/Screenshot_2025-12-29_170619_qoweoo.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049632/Screenshot_2025-12-29_170647_wpemdj.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049530/Screenshot_2025-12-29_170341_jzvs5x.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049633/Screenshot_2025-12-29_170657_ozojlf.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049529/Screenshot_2025-12-29_170236_bo5g87.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049530/Screenshot_2025-12-29_170245_w1wnmo.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049529/Screenshot_2025-12-29_170301_ozzeve.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049529/Screenshot_2025-12-29_170251_bigfgh.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049530/Screenshot_2025-12-29_170308_zdymp5.png"
+        ],
+        "technologies": [
+          "Electron",
+          "JavaScript",
+          "React",
+          "Vite",
+          "Roku ECP API",
+          "SSDP"
+        ],
+        "demoLink": "https://github.com/natelandrum/ecp-remote-for-roku/releases/tag/v0.1.0-beta.2"
       }
     ]
   },
@@ -503,7 +560,7 @@
       "title": "Educación",
       "degrees": [
         {
-          "degree": "Licenciatura en Ciencias Aplicadas en Desarrollo de Software",
+          "degree": "Licenciatura de Ciencias Aplicadas en Desarrollo de Software",
           "school": "Brigham Young University-Idaho",
           "date": "Abril 2026",
             "gpa": "Promedio 9.97",
@@ -540,7 +597,7 @@
         {
           "title": "Aprendiz de Electricista Industrial",
           "company": "Sikes Electric",
-          "date": "Febrero 2022 – Diciembre 2022",
+          "date": "Febrero 2022 - Diciembre 2022",
           "details": [
             "Asistí en instalaciones eléctricas, incluyendo tirado de cables, configuración de tubería rígida y cableado de sistemas de iluminación, motores y equipos de control.",
             "Realicé mantenimiento de planta e instalé bandejas de cables para apoyar la infraestructura eléctrica.",
@@ -550,7 +607,7 @@
         {
           "title": "Interno de Depósito de Manufactura",
           "company": "Instituto Politécnico Nacional",
-          "date": "Enero 2021 – Abril 2021",
+          "date": "Enero 2021 - Abril 2021",
           "details": [
             "Gestioné inventario controlando entrada/salida de materiales en el depósito de manufactura.",
             "Impartí instrucción práctica de laboratorio en maquinado (torno, fresadora), soldadura y procedimientos de seguridad.",
@@ -560,7 +617,7 @@
         {
           "title": "Profesor de Inglés (ESL)",
           "company": "Centro de Idiomas CEC",
-          "date": "Septiembre 2016 – 2021",
+          "date": "Septiembre 2016 - 2021",
           "details": [
             "Enseñé Inglés como Segundo Idioma a estudiantes de varios niveles de competencia, adaptando planes de lección para satisfacer necesidades individuales de aprendizaje.",
             "Asistí en desarrollo curricular y revisé prácticas de aula entre pares para mejorar la calidad de enseñanza.",
@@ -570,7 +627,7 @@
         {
           "title": "Especialista de Inventario y Compras",
           "company": "Barnett's Repair Shop",
-          "date": "2011 – 2015",
+          "date": "2011 - 2015",
           "details": [
             "Monitoreé niveles de stock, asegurando disponibilidad de partes y suministros críticos para operaciones diarias.",
             "Gestioné compras dentro de restricciones presupuestales, coordinando con proveedores para entregas oportunas.",
@@ -578,6 +635,23 @@
           ]
         }
       ]
+    },
+    "noteworthyProject": {
+      "sectionTitle": "Proyecto Destacado",
+      "projectTitle": "Control Remoto ECP para Roku",
+      "description":
+      "Desarrollé un control remoto de escritorio profesional para dispositivos Roku, utilizando Electron y la API ECP de Roku para una operación fluida y responsiva. El descubrimiento de dispositivos es automático mediante SSDP con búsqueda por IP como respaldo, asegurando conectividad confiable y una experiencia de usuario sin esfuerzo.",
+      "featuresTitle": "Características Clave:",
+      "features": [
+      "Soporte de idioma inglés y español",
+      "Interfaz intuitiva y accesible",
+      "Selector de aplicaciones y entradas cuando están disponibles",
+      "Controles de volumen y encendido para televisores",
+      "Accesos directos de aplicaciones personalizables",
+      "Personalización de temas",
+      "Atajos de teclado"
+      ],
+      "link": "https://github.com/natelandrum/ecp-remote-for-roku/releases/tag/v0.1.0-beta.2"
     }
   }
 }

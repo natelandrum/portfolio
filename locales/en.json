@@ -56,12 +56,14 @@
       "digitalOcean": "DigitalOcean",
       "azure": "Azure",
       "render": "Render",
+      "electron": "Electron",
       "other": "Other",
       "chromeWebStore": "Chrome Web Store"
     },
     "featuredProjects": [
-      {"id": 4},
+      {"id": 8},
       {"id": 7},
+      {"id": 4},
       {"id": 5},
       {"id": 6}
     ],
@@ -356,6 +358,61 @@
       "technologies": ["HTML", "CSS", "JavaScript"],
       "githubLink": "https://github.com/natelandrum/qr-code-generator",
       "demoLink": "https://qr-generator.nlandrum.dev/"
+      },
+      {
+        "id": 8,
+        "title": "ECP Remote for Roku",
+        "description": "A professional desktop remote control for Roku devices, leveraging Electron and Roku's ECP API for seamless, responsive operation. Device discovery is automatic via SSDP with IP scanning fallback, ensuring reliable connectivity and effortless user experience.",
+        "features": [
+          {
+        "title": "English and Spanish language support",
+        "description": "Switch between English and Spanish interfaces for broader accessibility."
+          },
+          {
+        "title": "Intuitive and accessible interface",
+        "description": "Designed for ease of use with clear controls and keyboard navigation."
+          },
+          {
+        "title": "App and input pickers",
+        "description": "Quickly select Roku apps and available input sources directly from the remote."
+          },
+          {
+        "title": "Volume and power controls",
+        "description": "Control TV volume and power (when supported) directly from the app."
+          },
+          {
+        "title": "Customizable app shortcuts & themes",
+        "description": "Personalize your experience with custom app shortcuts and theme options."
+          },
+          {
+        "title": "Keyboard shortcuts & advanced input",
+        "description": "Utilize convenient keyboard shortcuts to perform remote actions efficiently, and send alphanumeric input directly to your Roku device for seamless text entry."
+          }
+        ],
+        "status": "active",
+        "type": "desktop",
+        "platform": "electron",
+        "image": "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049632/Screenshot_2025-12-29_170555_fcgzgx.png",
+        "galleryImages": [
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049632/Screenshot_2025-12-29_170619_qoweoo.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049632/Screenshot_2025-12-29_170647_wpemdj.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049530/Screenshot_2025-12-29_170341_jzvs5x.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049633/Screenshot_2025-12-29_170657_ozojlf.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049529/Screenshot_2025-12-29_170236_bo5g87.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049530/Screenshot_2025-12-29_170245_w1wnmo.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049529/Screenshot_2025-12-29_170301_ozzeve.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049529/Screenshot_2025-12-29_170251_bigfgh.png",
+          "https://res.cloudinary.com/dhqwefv7s/image/upload/v1767049530/Screenshot_2025-12-29_170308_zdymp5.png"
+        ],
+        "technologies": [
+          "Electron",
+          "JavaScript",
+          "React",
+          "Vite",
+          "Roku ECP API",
+          "SSDP"
+        ],
+        "demoLink": "https://github.com/natelandrum/ecp-remote-for-roku/releases/tag/v0.1.0-beta.2"
       }
     ]
   },
@@ -583,6 +640,24 @@
           ]
         }
       ]
+    },
+    "noteworthyProject": {
+      "sectionTitle": "Noteworthy Project",
+      "projectTitle": "ECP Remote for Roku",
+      "description": 
+        "Engineered a professional desktop remote control for Roku devices, leveraging Electron and Roku's ECP API for seamless, responsive operation. Device discovery is automatic via SSDP with IP scanning fallback, ensuring reliable connectivity and effortless user experience.",
+              
+      "featuresTitle": "Key Features:",
+      "features": [
+        "English and Spanish language support",
+        "Intuitive and accessible interface",
+        "App and input pickers when available",
+        "Volume and power controls for TVs",
+        "Customizable app shortcuts",
+        "Theme personalization",
+        "Keyboard shortcuts"
+      ],
+      "link": "https://github.com/natelandrum/ecp-remote-for-roku/releases/tag/v0.1.0-beta.2"
     }
   }
 }

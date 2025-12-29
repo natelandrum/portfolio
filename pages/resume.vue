@@ -72,6 +72,10 @@ onMounted(() => {
         
         <!-- Experience Section (Expandable) -->
         <ResumeExperience />
+        <!-- Resume Divider -->
+        <div class="border-t border-gray-400 mx-8 mt-2"></div>
+        <!-- Noteworthy Projects Section -->
+        <ResumeNoteworthyProject />
       </div>
     </div>
 </template>
