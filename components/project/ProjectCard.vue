@@ -17,7 +17,7 @@ const { t } = useTranslation();
 
 <template>
   <div
-    class="bg-[var(--color-background)] rounded-lg overflow-hidden shadow-lg transition-all duration-300 border border-gray-200 h-full flex flex-col cursor-pointer hover:shadow-xl hover:scale-105"
+    class="group bg-[var(--color-background)] rounded-lg overflow-hidden shadow-lg transition-all duration-300 border border-gray-200 h-full flex flex-col cursor-pointer hover:shadow-xl hover:scale-105"
     @click="navigateToProject"
   >
     <!-- Project Image -->
@@ -33,7 +33,10 @@ const { t } = useTranslation();
       
       <!-- Click to learn more indicator -->
       <div class="mt-4 text-center">
-        <span class="text-primary text-sm font-medium">{{ t("projects.viewMore") }} →</span>
+        <span class="group-hover:text-blue-500 text-primary text-lg font-medium flex items-center justify-center">
+          {{ t("projects.viewMore") }}
+          <span class="inline-block text-3xl group-hover:translate-x-1 transition-transform ml-2">→</span>
+        </span>
       </div>
     </div>
   </div>

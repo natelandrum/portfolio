@@ -108,7 +108,7 @@ const updateModalIndex = (index: number) => {
     </div>
 
     <!-- Scroll Up Button -->
-    <div v-if="images.length > VISIBLE_COUNT" class="flex justify-center mb-3">
+    <div v-if="images.length > VISIBLE_COUNT" class="group flex justify-center mb-3">
       <button
         :disabled="!canScrollUp"
         :class="[
@@ -119,7 +119,15 @@ const updateModalIndex = (index: number) => {
         ]"
         @click="scrollUp"
       >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg
+          :class="[
+            'w-4 h-4',
+            canScrollUp ? 'group-hover:text-blue-500' : 'text-gray-600'
+          ]"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
         </svg>
       </button>
@@ -188,7 +196,7 @@ const updateModalIndex = (index: number) => {
     </div>
 
     <!-- Scroll Down Button -->
-    <div v-if="images.length > VISIBLE_COUNT" class="flex justify-center mt-3">
+    <div v-if="images.length > VISIBLE_COUNT" class="group flex justify-center mt-3">
       <button
         :disabled="!canScrollDown"
         :class="[
@@ -199,14 +207,22 @@ const updateModalIndex = (index: number) => {
         ]"
         @click="scrollDown"
       >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg
+          :class="[
+            'w-4 h-4',
+            canScrollDown ? 'group-hover:text-blue-500' : 'text-gray-600'
+          ]"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
         </svg>
       </button>
     </div>
 
     <!-- Image Modal -->
-    <ImageModal
+    <ProjectImageModal
       v-if="images.length > 0"
       :images="images"
       :current-index="modalCurrentIndex"
