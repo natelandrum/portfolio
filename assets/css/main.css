@@ -12,9 +12,14 @@
   transition: transform 0.2s;
 }
 
-.blue:hover:not(.active) {
+.blue:hover {
   transform: scale(0.95);
   background-color: hsla(217, 91%, 60%, 0.2);
+  cursor: pointer;
+}
+
+.blue:hover:not(.active) {
+  color: white;
   cursor: pointer;
 }
 

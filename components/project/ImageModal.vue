@@ -88,7 +88,7 @@ watch(() => props.isOpen, (isOpen) => {
         <div class="relative w-full h-full flex items-center justify-center p-4" @click.stop>
           <!-- Close Button -->
           <button
-            class="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-all duration-300 hover:scale-110"
+            class="absolute cursor-pointer top-4 right-4 z-10 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-all duration-300 hover:scale-110"
             @click="closeModal"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,7 +99,7 @@ watch(() => props.isOpen, (isOpen) => {
           <!-- Previous Button -->
           <button
             v-if="images.length > 1 && currentImageIndex > 0"
-            class="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-black/50 hover:bg-black/70 text-white rounded-full transition-all duration-300 hover:scale-110"
+            class="absolute cursor-pointer left-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-black/50 hover:bg-black/70 text-white rounded-full transition-all duration-300 hover:scale-110"
             @click="prevImage"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,7 +110,7 @@ watch(() => props.isOpen, (isOpen) => {
           <!-- Next Button -->
           <button
             v-if="images.length > 1 && currentImageIndex < images.length - 1"
-            class="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-black/50 hover:bg-black/70 text-white rounded-full transition-all duration-300 hover:scale-110"
+            class="absolute cursor-pointer right-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-black/50 hover:bg-black/70 text-white rounded-full transition-all duration-300 hover:scale-110"
             @click="nextImage"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

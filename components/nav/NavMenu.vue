@@ -90,7 +90,7 @@ onUnmounted(() => {
           // Mobile styling
           'px-3 py-3 mb-2 lg:mb-0 rounded-lg lg:rounded-none',
           // Active state
-          { 'active' : route.path === '/projects' }
+          { 'active' : route.path.includes('/projects') }
         ]"
       >
         <ProjectIcon class="mr-2 h-6 w-5"/>
