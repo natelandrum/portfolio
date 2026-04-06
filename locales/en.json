@@ -567,7 +567,7 @@
         {
           "degree": "Bachelor of Applied Science in Software Development",
           "school": "Brigham Young University-Idaho",
-          "date": "April 2026",
+          "date": "February 2026",
           "gpa": "4.0 GPA",
           "details": [
             "Built and deployed scalable web applications using front-end and backend frameworks.",
@@ -599,6 +599,15 @@
     "experience": {
       "title": "Experience",
       "jobs": [
+        {
+          "title": "Web Design and Development Intern",
+          "company": "Thaddeus Resource Center",
+          "date": "February 2026 - Present",
+          "details": [
+            "Designed, developed and maintained the organization's website, improving user experience and accessibility.",
+            "Collaborated with the team to implement new features, tests, and optimize performance."
+          ]
+        },
         {
           "title": "Industrial Electrician Apprentice",
           "company": "Sikes Electric",
