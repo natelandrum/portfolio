@@ -562,7 +562,7 @@
         {
           "degree": "Licenciatura de Ciencias Aplicadas en Desarrollo de Software",
           "school": "Brigham Young University-Idaho",
-          "date": "Abril 2026",
+          "date": "Febrero 2026",
             "gpa": "Promedio 9.97",
           "details": [
             "Construí y desplegué aplicaciones web escalables usando frameworks frontend y backend.",
@@ -594,6 +594,15 @@
     "experience": {
       "title": "Experiencia",
       "jobs": [
+        {
+          "title": "Pasantía en Diseño y Desarrollo Web",
+          "company": "Thaddeus Resource Center",
+          "date": "Febrero 2026 - Presente",
+          "details": [
+            "Diseñé, desarrollé y mantuve el sitio web de la organización, mejorando la experiencia del usuario y la accesibilidad.",
+            "Colaboré con el equipo para implementar nuevas funciones, pruebas y optimizar el rendimiento."
+          ]
+        },
         {
           "title": "Aprendiz de Electricista Industrial",
           "company": "Sikes Electric",
