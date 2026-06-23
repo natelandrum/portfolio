@@ -18,7 +18,7 @@ const summary = computed(() => t('resume.summary') as unknown as object & { poin
         :key="index"
         class="flex items-start ml-6 text-gray-700 text-sm"
       >
-        <span class="mr-2 mt-1.5 w-1.5 h-1.5 bg-gray-900 rounded-full flex-shrink-0"></span>
+        <span class="mr-2 mt-1.5 w-1.5 h-1.5 bg-gray-900 rounded-full flex-shrink-0"/>
         <span>{{ point }}</span>
       </li>
     </ul>

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const { t } = useTranslation()
 
 // SEO Meta
 useSeoMeta({
@@ -50,30 +49,30 @@ onMounted(() => {
         <ResumeHeader />
         
         <!-- Resume Divider -->
-        <div class="border-t border-gray-400 mx-8"></div>
+        <div class="border-t border-gray-400 mx-8"/>
         
         <!-- Professional Summary -->
         <ResumeSummary />
 
         <!-- Resume Divider -->
-        <div class="border-t border-gray-400 mx-8 mt-2"></div>
+        <div class="border-t border-gray-400 mx-8 mt-2"/>
         
         <!-- Skills Section -->
         <ResumeSkills />
         
         <!-- Resume Divider -->
-        <div class="border-t border-gray-400 mx-8 mt-2"></div>
+        <div class="border-t border-gray-400 mx-8 mt-2"/>
         
         <!-- Education Section (Expandable) -->
         <ResumeEducation />
 
         <!-- Resume Divider -->
-        <div class="border-t border-gray-400 mx-8 mt-2"></div>
+        <div class="border-t border-gray-400 mx-8 mt-2"/>
         
         <!-- Experience Section (Expandable) -->
         <ResumeExperience />
         <!-- Resume Divider -->
-        <div class="border-t border-gray-400 mx-8 mt-2"></div>
+        <div class="border-t border-gray-400 mx-8 mt-2"/>
         <!-- Noteworthy Projects Section -->
         <ResumeNoteworthyProject />
       </div>
