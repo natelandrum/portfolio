@@ -4,7 +4,6 @@
   import LocationIcon from '@/assets/icons/location.svg'
   import GithubIcon from '@/assets/icons/github.svg'
   import LinkedInIcon from '@/assets/icons/linkedin.svg'
-  import CVIcon from '@/assets/icons/cv.svg'
 
   const { t } = useTranslation()
 
@@ -103,10 +102,10 @@
         <!-- Contact Information -->
         <div 
           class="transition-all duration-700 transform"
-          :class="infoVisible ? 'translate-x-0 opacity-100' : 'translate-x-[-50px] opacity-0'"
+          :class="infoVisible ? 'translate-x-0 opacity-100' : '-translate-x-12.5 opacity-0'"
         >
           <h3 class="mb-6 text-2xl font-bold text-primary">{{ t('contact.contactInfo') }}</h3>
-          <p class="mb-8 text-gray-400 max-w-[500px]">
+          <p class="mb-8 text-gray-400 max-w-125">
             {{ t('contact.reachOut') }}
           </p>
 
@@ -116,19 +115,19 @@
                 <UiGradientBackground />
               </div>
               <div class="flex items-center py-2 hover:scale-110 transition-transform">
-                <EmailIcon class="mr-3 w-6 h-6 flex-shrink-0" />
+                <EmailIcon class="mr-3 w-6 h-6 shrink-0" />
                 <a :href="`mailto:${t('contact.myEmail')}`">{{ t('contact.myEmail') }}</a>
               </div>
             </div>
             <div class="flex items-start">
               <div class="flex items-center py-2 hover:scale-110 transition-transform">
-                <PhoneIcon class="mr-3 w-6 h-6 flex-shrink-0" />
+                <PhoneIcon class="mr-3 w-6 h-6 shrink-0" />
                 <a :href="`tel:${t('contact.myPhone')}`">{{ t('contact.myPhone') }}</a>
               </div>
             </div>
             <div class="flex items-start">
               <div class="flex items-center py-2 hover:scale-110 transition-transform">
-                <LocationIcon class="mr-3 w-6 h-6 flex-shrink-0" />
+                <LocationIcon class="mr-3 w-6 h-6 shrink-0" />
                 <span class="inline-block">{{ t('contact.myLocation') }}</span>
               </div>
             </div>
@@ -162,37 +161,37 @@
             <h3 class="mb-2 text-xl font-bold">{{ t('contact.thankYou') }}</h3>
             <p>{{ t('contact.getBack') }}</p>
             <button
-              @click="isSubmitted = false"
-              class="px-4 py-2 mt-4 font-bold text-white rounded transition-colors border-2 hover:bg-emerald-600"
+            class="px-4 py-2 mt-4 font-bold text-white rounded transition-colors border-2 hover:bg-emerald-600"
+            @click="isSubmitted = false"
             >
               {{ t('contact.sendAnother') }}
             </button>
           </div>
 
-          <form v-else @submit.prevent="submitForm" class="space-y-6 border border-gray-200 rounded-xl p-4 flex flex-col">
-            <div class="transition-all duration-500 delay-[100ms]" :class="formVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'">
+          <form v-else class="space-y-6 border border-gray-200 rounded-xl p-4 flex flex-col" @submit.prevent="submitForm">
+            <div class="transition-all duration-500 delay-100" :class="formVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'">
               <label for="name" class="block mb-2">{{ t('contact.name') }}</label>
               <input
-                type="text"
                 id="name"
                 v-model="name"
+                type="text"
                 required
                 class="px-4 py-2 w-full bg-gray-800 rounded border border-gray-400 focus:border-blue-400 focus:outline-none"
-              />
+              >
             </div>
 
-            <div class="transition-all duration-500 delay-[200ms]" :class="formVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'">
+            <div class="transition-all duration-500 delay-200" :class="formVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'">
               <label for="email" class="block mb-2">{{ t('contact.email') }}</label>
               <input
-                type="email"
                 id="email"
                 v-model="email"
+                type="email"
                 required
                 class="px-4 py-2 w-full bg-gray-800 rounded border border-gray-400 focus:border-blue-400 focus:outline-none"
-              />
+              >
             </div>
 
-            <div class="transition-all duration-500 delay-[300ms]" :class="formVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'">
+            <div class="transition-all duration-500 delay-300" :class="formVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'">
               <label for="message" class="block mb-2">{{ t('contact.message') }}</label>
               <textarea
                 id="message"
@@ -200,7 +199,7 @@
                 rows="5"
                 required
                 class="px-4 py-2 w-full bg-gray-800 rounded border border-gray-400 focus:border-blue-400 focus:outline-none"
-              ></textarea>
+              />
             </div>
 
             <div v-if="errorMessage" class="p-4 bg-red-800 rounded">
@@ -210,7 +209,7 @@
             <button
               type="submit"
               :disabled="isSubmitting"
-              class="self-center px-6 py-3 w-full max-w-[300px] font-bold border-2 blue transition-all duration-500 delay-[400ms]"
+              class="self-center px-6 py-3 w-full max-w-75 font-bold border-2 blue transition-all duration-500 delay-400"
               :class="formVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-10 opacity-0 scale-95'"
             >
               <span v-if="isSubmitting">{{ t('contact.sending') }}</span>

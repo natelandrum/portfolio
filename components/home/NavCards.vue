@@ -1,9 +1,9 @@
 <script setup lang="ts">
 
-  const { t } = useTranslation()
-    import ProjectIcon from '@/assets/icons/project.svg'
+  import ProjectIcon from '@/assets/icons/project.svg'
     import ResumeIcon from '@/assets/icons/resume.svg'
     import AboutIcon from '@/assets/icons/about.svg'
+    const { t } = useTranslation()
 
   type NavCard = {
     cardTitle: string
@@ -112,7 +112,7 @@
         <!-- Subtle arrow indicator -->
         <div class="relative z-10 mt-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
           <svg class="text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: clamp(16px, 1.5vw, 20px); height: clamp(16px, 1.5vw, 20px);">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
         </div>
       </router-link>

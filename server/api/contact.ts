@@ -1,5 +1,6 @@
 import { RateLimiterMemory } from 'rate-limiter-flexible'
-import { H3Event, getHeader, getHeaders, readBody, createError, sendError } from 'h3'
+import type { H3Event} from 'h3';
+import { getHeader, getHeaders, readBody, createError, sendError } from 'h3'
 
 const limiter = new RateLimiterMemory({
   points: 1,
