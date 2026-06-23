@@ -92,76 +92,78 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="container max-w-[90%] mx-auto px-4 py-16">
-    
-    <!-- Header Section -->
-    <div 
-      id="about-header"
-      class="text-center mb-16 opacity-0 transform translate-y-8 transition-all duration-800 ease-out"
-      :class="{ 'opacity-100 translate-y-0': headerVisible }"
-    >
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">
-        {{ aboutData.title }}
-      </h1>
-      <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-        {{ aboutData.subtitle }}
-      </p>
-    </div>
-
-    <!-- Story Sections -->
-    <div class="space-y-8 mb-20">
+  <div>
+    <div class="container max-w-[90%] mx-auto px-4 py-16">
+      
+      <!-- Header Section -->
       <div 
-        v-for="(section, index) in aboutData.sections" 
-        :key="index"
-        :data-section-index="index"
-        class="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 opacity-0 transform translate-y-8"
-        :class="{ 
-          'opacity-100 translate-y-0': visibleSections.includes(index),
-          'transition-all duration-700 ease-out': visibleSections.includes(index)
-        }"
+        id="about-header"
+        class="text-center mb-16 opacity-0 transform translate-y-8 transition-all duration-800 ease-out"
+        :class="{ 'opacity-100 translate-y-0': headerVisible }"
       >
-        <!-- Desktop Layout -->
-        <div class="hidden sm:flex items-start gap-4">
-          <!-- Icon -->
-          <div class="text-2xl flex-shrink-0 mt-1">
-            {{ section.icon }}
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          {{ aboutData.title }}
+        </h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+          {{ aboutData.subtitle }}
+        </p>
+      </div>
+
+      <!-- Story Sections -->
+      <div class="space-y-8 mb-20">
+        <div 
+          v-for="(section, index) in aboutData.sections" 
+          :key="index"
+          :data-section-index="index"
+          class="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 opacity-0 transform translate-y-8"
+          :class="{ 
+            'opacity-100 translate-y-0': visibleSections.includes(index),
+            'transition-all duration-700 ease-out': visibleSections.includes(index)
+          }"
+        >
+          <!-- Desktop Layout -->
+          <div class="hidden sm:flex items-start gap-4">
+            <!-- Icon -->
+            <div class="text-2xl shrink-0 mt-1">
+              {{ section.icon }}
+            </div>
+            
+            <!-- Content -->
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold mb-3">
+                {{ section.title }}
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                {{ section.content }}
+              </p>
+            </div>
           </div>
-          
-          <!-- Content -->
-          <div class="flex-1">
-            <h3 class="text-xl font-semibold mb-3">
-              {{ section.title }}
-            </h3>
-            <p class="text-gray-400 leading-relaxed">
+
+          <!-- Mobile Layout -->
+          <div class="sm:hidden text-center">
+            <!-- Icon and Title -->
+            <div class="flex flex-col items-center mb-4">
+              <div class="text-3xl mb-2">
+                {{ section.icon }}
+              </div>
+              <h3 class="text-xl font-semibold">
+                {{ section.title }}
+              </h3>
+            </div>
+            
+            <!-- Content -->
+            <p class="text-gray-400 leading-relaxed text-left">
               {{ section.content }}
             </p>
           </div>
         </div>
-
-        <!-- Mobile Layout -->
-        <div class="sm:hidden text-center">
-          <!-- Icon and Title -->
-          <div class="flex flex-col items-center mb-4">
-            <div class="text-3xl mb-2">
-              {{ section.icon }}
-            </div>
-            <h3 class="text-xl font-semibold">
-              {{ section.title }}
-            </h3>
-          </div>
-          
-          <!-- Content -->
-          <p class="text-gray-400 leading-relaxed text-left">
-            {{ section.content }}
-          </p>
-        </div>
       </div>
-    </div>
 
+    </div>
+    
+    <!-- Full-width HR -->
+    <UiFullWidthDivider />  
+    <!-- Contact Section -->
+    <AboutContact />
   </div>
-  
-  <!-- Full-width HR -->
-  <UiFullWidthDivider />  
-  <!-- Contact Section -->
-  <AboutContact />
 </template>

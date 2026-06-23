@@ -45,7 +45,7 @@
       src="https://res.cloudinary.com/dhqwefv7s/image/upload/v1775487511/profile_gnsaqd.webp"
       :alt="`${t('contact.myName')} Profile`"
       class="mt-4 rounded-full min-w-auto min-h-[300px] max-w-auto max-h-[300px] brightness-90"
-        />
+        >
       </div>
     </div>
   </section>

@@ -17,19 +17,19 @@ const { t } = useTranslation();
 
 <template>
   <div
-    class="group bg-[var(--color-background)] rounded-lg overflow-hidden shadow-lg transition-all duration-300 border border-gray-200 h-full flex flex-col cursor-pointer hover:shadow-xl hover:scale-105"
+    class="group bg-(--color-background) rounded-lg overflow-hidden shadow-lg transition-all duration-300 border border-gray-200 h-full flex flex-col cursor-pointer hover:shadow-xl hover:scale-105"
     @click="navigateToProject"
   >
     <!-- Project Image -->
-    <div class="h-48 bg-gradient-to-r from-gray-800 to-gray-700 flex justify-center">
-      <img v-if="image" :src="image" :alt="title" class="w-full h-full object-cover" />
+    <div class="h-48 bg-linear-to-r from-gray-800 to-gray-700 flex justify-center">
+      <img v-if="image" :src="image" :alt="title" class="w-full h-full object-cover" >
       <div v-else class="text-light text-xl font-bold px-4 text-center flex items-center">{{ title }}</div>
     </div>
 
     <!-- Project Content -->
-    <div class="flex-grow flex flex-col p-6">
+    <div class="grow flex flex-col p-6">
       <h3 class="text-xl font-bold text-light mb-3">{{ title }}</h3>
-      <p class="text-gray-400 text-sm line-clamp-3 flex-grow">{{ description }}</p>
+      <p class="text-gray-400 text-sm line-clamp-3 grow">{{ description }}</p>
       
       <!-- Click to learn more indicator -->
       <div class="mt-4 text-center">

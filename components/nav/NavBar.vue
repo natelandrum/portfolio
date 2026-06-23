@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { watch } from 'vue'
+  import type { ComponentPublicInstance } from 'vue'
   import { useRoute } from 'vue-router'
   
   const isMenuOpen = ref(false)
@@ -7,8 +8,8 @@
   const route = useRoute()
 
   // Refs for the elements
-  const mobileMenuButton = ref<any>(null)
-  const navMenu = ref<any>(null)
+  const mobileMenuButton = ref<ComponentPublicInstance | null>(null)
+  const navMenu = ref<ComponentPublicInstance | null>(null)
 
   const toggleMenu = () => {
     isMenuOpen.value = !isMenuOpen.value
@@ -76,7 +77,7 @@
       <!-- Logo -->
        <router-link to="/">
          <div class="flex items-center cursor-pointer">
-            <img src="/assets/logo.png" alt="logo" class="w-14 h-auto rounded-full mr-4 py-0" />
+            <img src="/assets/logo.png" alt="logo" class="w-14 h-auto rounded-full mr-4 py-0" >
             <div class="text-xl font-bold uppercase">{{ t('contact.myName') }}</div>
          </div>
        </router-link>

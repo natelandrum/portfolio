@@ -45,7 +45,8 @@ const isExpanded = (index: number) => expandedItems.value.has(index)
         class="border-l-2 border-gray-200 pl-4"
       >
       <!-- Main Info (Always Visible) -->
-      <div class="rounded p-2 hover:bg-gray-50 cursor-pointer transition-colors"
+      <div
+class="rounded p-2 hover:bg-gray-50 cursor-pointer transition-colors"
         @click="toggleExpanded(index)"
       >
         <!-- Desktop Layout -->
@@ -113,7 +114,7 @@ const isExpanded = (index: number) => expandedItems.value.has(index)
                 :key="detailIndex"
                 class="flex items-start text-sm text-gray-600"
               >
-                <span class="mr-2 mt-1.5 w-1 h-1 bg-gray-500 rounded-full flex-shrink-0"></span>
+                <span class="mr-2 mt-1.5 w-1 h-1 bg-gray-500 rounded-full flex-shrink-0"/>
                 <span>{{ detail }}</span>
               </li>
             </ul>
@@ -145,7 +146,7 @@ const isExpanded = (index: number) => expandedItems.value.has(index)
           :key="certIndex"
           class="text-sm text-gray-700 flex items-center"
         >
-          <span class="mr-2 w-1.5 h-1.5 bg-gray-500 rounded-full flex-shrink-0"></span>
+          <span class="mr-2 w-1.5 h-1.5 bg-gray-500 rounded-full flex-shrink-0"/>
           <span>{{ certificate }}</span>
         </div>
       </div>

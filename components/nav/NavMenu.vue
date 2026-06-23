@@ -49,7 +49,7 @@ onUnmounted(() => {
       'lg:flex lg:flex-row lg:items-center lg:relative lg:bg-transparent lg:shadow-none lg:w-auto lg:h-auto lg:pt-0 lg:px-0 lg:translate-x-0 lg:transform-none',
       
       // Mobile: vertical sidebar layout, only show when menu is open
-      'fixed top-0 right-0 bg-black h-[100vh] w-64 shadow-lg z-[50] flex-col pt-16 px-6',
+      'fixed top-0 right-0 bg-black h-screen w-64 shadow-lg z-50 flex-col pt-16 px-6',
       
       // Mobile visibility and transform - only apply on mobile
       {
@@ -64,9 +64,9 @@ onUnmounted(() => {
     </div>
 
     <!-- Navigation Links -->
-    <router-link to="/" @click="$emit('close')" class="block">
+    <router-link to="/" class="block" @click="$emit('close')">
       <div
-        class="blue flex border-0! transition-all duration-200"
+        class="blue flex items-center border-0! transition-all duration-200"
         :class="[
           // Desktop styling
           'lg:px-3 lg:py-2',
@@ -81,9 +81,9 @@ onUnmounted(() => {
       </div>
     </router-link>
 
-    <router-link to="/projects" @click="$emit('close')" class="block">
+    <router-link to="/projects" class="block" @click="$emit('close')">
       <div
-        class="blue flex border-0! transition-all duration-200"
+        class="blue flex items-center border-0! transition-all duration-200"
         :class="[
           // Desktop styling
           'lg:px-3 lg:py-2',
@@ -98,9 +98,9 @@ onUnmounted(() => {
       </div>
     </router-link>
 
-    <router-link to="/resume" @click="$emit('close')" class="block">
+    <router-link to="/resume" class="block" @click="$emit('close')">
       <div
-        class="blue flex border-0! transition-all duration-200"
+        class="blue flex items-center border-0! transition-all duration-200"
         :class="[
           // Desktop styling
           'lg:px-3 lg:py-2',
@@ -115,9 +115,9 @@ onUnmounted(() => {
       </div>
     </router-link>
 
-    <router-link to="/about" @click="$emit('close')" class="block">
+    <router-link to="/about" class="block" @click="$emit('close')">
       <div
-        class="blue flex border-0! transition-all duration-200"
+        class="blue flex items-center border-0! transition-all duration-200"
         :class="[
           // Desktop styling
           'lg:px-3 lg:py-2',

@@ -124,7 +124,7 @@ watch(() => props.isOpen, (isOpen) => {
               :src="images[currentImageIndex]"
               :alt="`Gallery image ${currentImageIndex + 1}`"
               class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
-            />
+            >
             
             <!-- Image Counter -->
             <div
@@ -155,7 +155,7 @@ watch(() => props.isOpen, (isOpen) => {
                 :src="image"
                 :alt="`Thumbnail ${index + 1}`"
                 class="w-full h-full object-cover"
-              />
+              >
             </button>
           </div>
         </div>

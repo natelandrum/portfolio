@@ -1,6 +1,5 @@
 import { ref, onMounted } from 'vue'
 import { useNuxtApp } from 'nuxt/app'
-import { getHeader } from 'h3'
 
 export function useDevice() {
   const isMobile = ref(false)
@@ -9,9 +8,7 @@ export function useDevice() {
 
   const detectFromUserAgent = () => {
     const nuxtApp = useNuxtApp()
-    const ua = nuxtApp.ssrContext?.event
-      ? getHeader(nuxtApp.ssrContext.event, 'user-agent') || ''
-      : ''
+    const ua = nuxtApp.ssrContext?.event?.node?.req?.headers?.['user-agent'] || ''
     return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua)
   }
 

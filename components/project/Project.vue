@@ -143,8 +143,8 @@
       <div v-if="otherProjects.length > 0" class="mt-16">
         <div class="text-center mb-8">
           <button
-            @click="toggleOtherProjects"
             class="px-6 py-3 border-2 hover:scale-105 hover:cursor-pointer transition-all duration-300 rounded-lg font-semibold"
+            @click="toggleOtherProjects"
           >
             {{ showAllProjects ? t('projects.hideOtherProjects') : t('projects.showOtherProjects') }}
           </button>
